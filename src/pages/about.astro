@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Chain Brief"
+  description="Chain Brief is an independent crypto publication covering what's happening in crypto and how it works — clearly, from first principles. Not financial advice."
+>
+  <article style="max-width:640px;">
+    <h1 style="font-size:2rem; font-weight:800; letter-spacing:-0.03em; margin-bottom:1.5rem;">About Chain Brief</h1>
+
+    <p style="color:var(--brand-muted); font-size:1.05rem; margin-bottom:2rem;">
+      <em>Crypto made clear — from first principles to the latest signals.</em>
+    </p>
+
+    <h2 style="font-size:1.1rem; font-weight:700; margin:2rem 0 0.75rem;">What we are</h2>
+    <p>Chain Brief is an independent editorial publication covering the crypto ecosystem. We write for two audiences simultaneously:
+    readers who are new to crypto and want to understand how it actually works, and readers already in the ecosystem who want a reliable,
+    jargon-free read on what's happening week to week.</p>
+
+    <h2 style="font-size:1.1rem; font-weight:700; margin:2rem 0 0.75rem;">What we are not</h2>
+    <p>We are <strong>not a financial advisory</strong>. Chain Brief never says "buy X" or "sell Y". We do not publish trading signals,
+    price predictions, or investment recommendations. Every piece of content carries a clear disclaimer:
+    <em>this is not financial advice</em>. We take this seriously.</p>
+
+    <h2 style="font-size:1.1rem; font-weight:700; margin:2rem 0 0.75rem;">What you get</h2>
+    <ul style="padding-left:1.25rem; color:var(--brand-muted);">
+      <li style="margin-bottom:0.5rem;"><strong style="color:var(--brand-text)">Daily Market Brief (Mon–Fri)</strong> — news summaries and on-chain context in plain English</li>
+      <li style="margin-bottom:0.5rem;"><strong style="color:var(--brand-text)">Weekly Deep-Dive</strong> — protocol analysis, ecosystem developments, what moved markets</li>
+      <li style="margin-bottom:0.5rem;"><strong style="color:var(--brand-text)">Chain 101 (bi-weekly)</strong> — beginner explainers: blockchains, wallets, DeFi, Layer 2s and beyond</li>
+    </ul>
+
+    <h2 style="font-size:1.1rem; font-weight:700; margin:2rem 0 0.75rem;">Editorial principles</h2>
+    <p>Independence above all. We don't accept payment for editorial coverage. Sponsors are clearly disclosed
+    and kept separate from editorial content. Our job is to be the most reliable independent voice in a space
+    full of conflicts of interest — we protect that fiercely.</p>
+
+    <div class="subscribe-bar" style="margin-top:3rem;">
+      <h2>Get crypto made clear.</h2>
+      <p>Free. Independent. Not financial advice.</p>
+      <div class="subscribe-form">
+        <input type="email" placeholder="your@email.com" aria-label="Email address" />
+        <button class="btn">Subscribe</button>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
