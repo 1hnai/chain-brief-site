@@ -1,0 +1,188 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', ({ data }) => data.status === 'live');
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+const { title, description, category, publishedDate, author } = article.data;
+
+const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
+  month: 'long', day: 'numeric', year: 'numeric'
+});
+---
+
+<BaseLayout title={title} description={description} article={true} publishedDate={publishedDate}>
+  <article class="article-wrap">
+    <div class="article-header">
+      <div class="article-meta">
+        <a href="/articles" class="meta-back">Articles</a>
+        <span class="meta-sep">/</span>
+        <span class="meta-cat">{category}</span>
+      </div>
+      <h1 class="article-title">{title}</h1>
+      <div class="article-byline">
+        <span class="article-date">{formattedDate}</span>
+        {author && <><span class="byline-sep">·</span><span class="article-author">{author}</span></>}
+      </div>
+    </div>
+
+    <div class="article-body">
+      <Content />
+    </div>
+
+    <div class="article-footer">
+      <p class="disclaimer">This is not financial advice. Chain Brief is an independent editorial publication.</p>
+    </div>
+  </article>
+
+  <div class="subscribe-bar">
+    <h2>Get crypto made clear, every day.</h2>
+    <p>Independent editorial. Not financial advice. Unsubscribe any time.</p>
+    <div class="subscribe-form">
+      <input type="email" placeholder="your@email.com" aria-label="Email address" />
+      <button class="btn">Subscribe — it's free</button>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .article-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .article-header {
+    padding: 2rem 0 2rem;
+    border-bottom: 1px solid var(--brand-border);
+    margin-bottom: 2rem;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .meta-back {
+    color: var(--brand-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    font-size: 0.7rem;
+  }
+
+  .meta-back:hover { color: var(--brand-text); text-decoration: none; }
+
+  .meta-sep { color: var(--brand-border); }
+
+  .meta-cat {
+    color: var(--brand-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    font-size: 0.7rem;
+  }
+
+  .article-title {
+    font-size: clamp(1.6rem, 4vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    color: var(--brand-text);
+    margin-bottom: 0.75rem;
+  }
+
+  .article-byline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: var(--brand-muted);
+  }
+
+  .byline-sep { color: var(--brand-border); }
+
+  .article-body :global(p) {
+    margin-bottom: 1.25rem;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  .article-body :global(h2) {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+    letter-spacing: -0.015em;
+  }
+
+  .article-body :global(h3) {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+  }
+
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    margin: 0.5rem 0 1.25rem 1.5rem;
+  }
+
+  .article-body :global(li) {
+    margin-bottom: 0.4rem;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  .article-body :global(strong) { font-weight: 700; }
+
+  .article-body :global(hr) {
+    border: none;
+    border-top: 1px solid var(--brand-border);
+    margin: 2.5rem 0;
+  }
+
+  .article-body :global(a) {
+    color: var(--brand-accent-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .article-body :global(a:hover) { opacity: 0.8; }
+
+  .article-body :global(blockquote) {
+    border-left: 3px solid var(--brand-accent);
+    padding-left: 1.25rem;
+    color: var(--brand-muted);
+    margin: 1.5rem 0;
+    font-style: italic;
+  }
+
+  .article-body :global(code) {
+    background: var(--brand-surface);
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-family: 'Courier New', monospace;
+  }
+
+  .article-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--brand-border);
+  }
+
+  .disclaimer {
+    font-size: 0.75rem;
+    color: var(--brand-muted);
+    font-style: italic;
+  }
+</style>
