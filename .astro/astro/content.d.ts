@@ -140,14 +140,50 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"articles": Record<string, {
-  id: string;
-  slug: string;
+		"articles": {
+"ethereum-roadmap-2026.md": {
+	id: "ethereum-roadmap-2026.md";
+  slug: "ethereum-roadmap-2026";
   body: string;
   collection: "articles";
-  data: InferEntrySchema<"articles">;
-  render(): Render[".md"];
-}>;
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"week-in-crypto-march-17-21-2026.md": {
+	id: "week-in-crypto-march-17-21-2026.md";
+  slug: "week-in-crypto-march-17-21-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"what-is-a-blockchain.md": {
+	id: "what-is-a-blockchain.md";
+  slug: "what-is-a-blockchain";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"what-is-a-crypto-wallet.md": {
+	id: "what-is-a-crypto-wallet.md";
+  slug: "what-is-a-crypto-wallet";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"what-is-defi.md": {
+	id: "what-is-defi.md";
+  slug: "what-is-defi";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"why-bitcoin-hit-100k.md": {
+	id: "why-bitcoin-hit-100k.md";
+  slug: "why-bitcoin-hit-100k";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+};
 
 	};
 
