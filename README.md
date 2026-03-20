@@ -41,18 +41,43 @@ npm run preview
 
 ## Deployment
 
-This site deploys automatically via Netlify on every push to `main`.
+This site deploys automatically via [Railway](https://railway.app) on every push to `main`.
 
-Build settings (configured in `netlify.toml`):
-- **Build command**: `npm run build`
-- **Publish directory**: `dist`
+**Live URL**: [https://chain-brief-site-production.up.railway.app](https://chain-brief-site-production.up.railway.app)
 
-To connect to Netlify:
-1. Go to [Netlify](https://app.netlify.com) → **Add new site** → **Import an existing project**
-2. Connect the `1hnai/chain-brief-site` GitHub repo
-3. Netlify will auto-detect the build config from `netlify.toml`
+**Target domain**: [chainbrief.com](https://chainbrief.com)
+
+The Railway deployment uses the `Dockerfile` at the repo root, which builds the Astro site and serves it with nginx. The `railway.json` configuration file defines the build and start settings.
+
+To deploy: push to `main`. Railway will pick up the change and redeploy automatically.
 
 ## Tech Stack
 
 - [Astro](https://astro.build) — static site generator
-- [Netlify](https://netlify.com) — hosting and CI/CD
+- [Railway](https://railway.app) — hosting and CI/CD
+- [nginx](https://nginx.org) — static file serving (via Docker)
+
+## Content
+
+Articles live in `src/content/articles/` as Markdown files with frontmatter. Only articles with `status: live` appear on the site.
+
+```
+src/content/articles/
+  what-is-a-blockchain.md
+  what-is-a-crypto-wallet.md
+  what-is-defi.md
+  ethereum-roadmap-2026.md
+  why-bitcoin-hit-100k.md
+  week-in-crypto-march-17-21-2026.md
+```
+
+### Content schema
+
+```typescript
+title: string
+description: string
+category: 'Market Brief' | 'Deep Dive' | 'Chain 101' | 'Tutorial' | 'Analysis'
+publishedDate: string  // YYYY-MM-DD
+status: 'draft' | 'live'
+author?: string
+```
