@@ -81,3 +81,4 @@ publishedDate: string  // YYYY-MM-DD
 status: 'draft' | 'live'
 author?: string
 ```
+
