@@ -7,7 +7,7 @@ status: "draft"
 author: "Chain Brief"
 ---
 
-BlackRock's BUIDL fund crossed $1 billion in on-chain assets within weeks of its March 2024 launch — faster than almost any tokenized product before it. While the broader market was fixated on meme coin cycles and L1 competition, tokenized real-world assets were quietly assembling one of crypto's most credible product-market fits.
+BlackRock's BUIDL fund crossed $1 billion in on-chain assets within weeks of its March 2024 launch, faster than almost any tokenized product before it. While the broader market was fixated on meme coin cycles and L1 competition, tokenized real-world assets were quietly assembling one of crypto's most credible product-market fits.
 
 The pitch is not complicated. Hold US Treasury bills on a blockchain, earn the yield, and keep those assets usable inside DeFi. For protocol treasuries, DAOs, and institutions that already operate on-chain, it removes a persistent inefficiency: idle stablecoin balances earning nothing.
 
@@ -21,7 +21,7 @@ This is not a new idea. What changed between 2022 and 2025 was the combination o
 
 ## The Main Products
 
-**BlackRock BUIDL** is the highest-profile entry. Launched on Ethereum and managed in partnership with Securitize as transfer agent, BUIDL invests in cash, US Treasury bills, and repurchase agreements. It targets institutional investors and carries minimum investment requirements. Its importance is not just its assets under management — it is that a firm of BlackRock's scale validated the format. BUIDL has since expanded to additional chains beyond Ethereum.
+**BlackRock BUIDL** is the highest-profile entry. Launched on Ethereum and managed in partnership with Securitize as transfer agent, BUIDL invests in cash, US Treasury bills, and repurchase agreements. It targets institutional investors and carries minimum investment requirements. Its importance is not just its assets under management: it is that a firm of BlackRock's scale validated the format. BUIDL has since expanded to additional chains beyond Ethereum.
 
 **Franklin Templeton's BENJI** has the longest track record of the major products, having launched on Stellar in 2021 before expanding to Polygon. BENJI is registered with the SEC as a money market fund and represents shares of the Franklin OnChain US Government Money Fund. Franklin has maintained that on-chain record-keeping of fund shares is legally valid, a position it has quietly built toward regulatory acceptance over several years.
 
@@ -37,7 +37,7 @@ The interest rate environment created urgency. When risk-free Treasury yields we
 
 DeFi infrastructure reached institutional legibility. The early versions of tokenized treasuries involved novel legal structures that institutional legal teams could not easily diligence. By 2024, the custody arrangements, transfer agent frameworks, and regulatory filings had been developed far enough that firms like BlackRock and Franklin Templeton could participate without creating unacceptable legal exposure.
 
-On-chain institutional activity created genuine demand. As more institutional capital began operating on-chain — through ETF mechanics, custody products, and protocol participation — the need for on-chain cash equivalents grew. Holding yield-bearing assets that could serve as DeFi collateral became an operational need, not a speculative position.
+On-chain institutional activity created genuine demand. As more institutional capital began operating on-chain - through ETF mechanics, custody products, and protocol participation - the need for on-chain cash equivalents grew. Holding yield-bearing assets that could serve as DeFi collateral became an operational need, not a speculative position.
 
 ## The Risks
 

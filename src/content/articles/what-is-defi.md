@@ -9,7 +9,7 @@ author: "Chain Brief"
 
 Traditional finance runs on institutions. When you want to exchange currencies, you go through a bank or a broker. When you want to borrow money, a lender evaluates your creditworthiness and decides whether to approve you. When you want to earn interest, you deposit money in an institution and they invest it on your behalf, sharing a fraction of the return.
 
-DeFi — decentralised finance — attempts to replicate these functions using smart contracts on a blockchain, with no institution in between.
+DeFi - decentralised finance - attempts to replicate these functions using smart contracts on a blockchain, with no institution in between.
 
 "No institution" means: no company holds the funds, no compliance team can freeze your account, no headquarters to raid or shut down. It also means: no customer support, no recourse if something goes wrong, and no protection if you make a mistake.
 
@@ -17,25 +17,25 @@ That combination of possibility and risk is the defining character of DeFi.
 
 ## Smart contracts: the foundation
 
-Everything in DeFi runs on **smart contracts** — code that lives on a blockchain and executes automatically when certain conditions are met. A smart contract is like a vending machine: you put in the right input, you get the defined output, no human involvement required.
+Everything in DeFi runs on **smart contracts** - code that lives on a blockchain and executes automatically when certain conditions are met. A smart contract is like a vending machine: you put in the right input, you get the defined output, no human involvement required.
 
-Most DeFi is built on Ethereum, though significant ecosystems exist on other chains. The contracts are generally open source — anyone can read exactly what the code does before deciding whether to interact with it.
+Most DeFi is built on Ethereum, though significant activity exists on other chains. The contracts are generally open source - anyone can read exactly what the code does before deciding whether to interact with it.
 
 ## Decentralised exchanges (DEXes)
 
 The most widely used DeFi application is the **decentralised exchange**, or DEX. A DEX lets you swap one token for another directly from your wallet, without depositing funds anywhere or creating an account.
 
-The dominant model is the **Automated Market Maker (AMM)**. Instead of matching buyers with sellers in an order book, an AMM uses liquidity pools: pools of two tokens locked in a smart contract. A pricing algorithm — typically based on the ratio of the two tokens — determines the exchange rate. Uniswap, Curve, and Balancer are prominent examples.
+The dominant model is the **Automated Market Maker (AMM)**. Instead of matching buyers with sellers in an order book, an AMM uses liquidity pools: pools of two tokens locked in a smart contract. A pricing algorithm based on the ratio of the two tokens determines the exchange rate. Uniswap, Curve, and Balancer are prominent examples.
 
 When you swap on a DEX, you're transacting directly with the pool. You connect your wallet, approve the transaction, and the contract does the rest.
 
 ## Lending and borrowing
 
-DeFi lending protocols like Aave and Compound let users lend out their crypto to earn interest, or borrow crypto against collateral — all without a credit check or a loan officer.
+DeFi lending protocols like Aave and Compound let users lend out their crypto to earn interest, or borrow crypto against collateral, all without a credit check or a loan officer.
 
 It works like this: you deposit crypto into a lending pool. Borrowers take from that pool, paying an interest rate set algorithmically by supply and demand. Lenders receive a stream of that interest.
 
-Because there are no credit checks, DeFi loans are **over-collateralised**: to borrow $100 worth of assets, you might need to deposit $150 worth of collateral. If the value of your collateral drops below a threshold, the protocol automatically **liquidates** it — sells it to repay the loan — to protect the lenders.
+Because there are no credit checks, DeFi loans are **over-collateralised**: to borrow $100 worth of assets, you might need to deposit $150 worth of collateral. If the value of your collateral drops below a threshold, the protocol automatically **liquidates** it - sells it to repay the loan - to protect the lenders.
 
 ## Yield and liquidity provision
 
@@ -49,20 +49,20 @@ DeFi can be genuinely useful, but it carries risks that have no equivalent in tr
 
 **Smart contract bugs**: The code running these protocols is not infallible. Bugs have allowed attackers to drain pools, mint unlimited tokens, and manipulate oracles. Even audited contracts have been exploited. When a smart contract is drained, the funds are generally unrecoverable.
 
-**Rug pulls**: In less reputable corners of DeFi, a team launches a project, attracts liquidity, and then withdraws everything — leaving investors with worthless tokens. This is a deliberate scam, but it's structurally easy to execute when there's no institutional gatekeeper.
+**Rug pulls**: In less reputable corners of DeFi, a team launches a project, attracts liquidity, and then withdraws everything, leaving investors with worthless tokens. This is a deliberate scam, but it's structurally easy to execute when there's no institutional gatekeeper.
 
-**Impermanent loss**: Liquidity providers in AMM pools are exposed to a phenomenon called impermanent loss. If the price ratio of the two tokens in a pool changes significantly from when you deposited, you may end up with less value than if you had simply held the tokens. The term "impermanent" is somewhat misleading — it only reverses if prices return to their original ratio, which often doesn't happen.
+**Impermanent loss**: Liquidity providers in AMM pools are exposed to a phenomenon called impermanent loss. If the price ratio of the two tokens in a pool changes significantly from when you deposited, you may end up with less value than if you had simply held the tokens. The term "impermanent" is somewhat misleading - it only reverses if prices return to their original ratio, which often doesn't happen.
 
-**Oracle manipulation**: DeFi protocols often need to know the real-world price of an asset. They get this from **oracles** — external data feeds. If an oracle is manipulated (often through flash loans and coordinated trading), a protocol can be tricked into making decisions based on false prices, with exploitable consequences.
+**Oracle manipulation**: DeFi protocols often need to know the real-world price of an asset. They get this from **oracles** - external data feeds. If an oracle is manipulated (often through flash loans and coordinated trading), a protocol can be tricked into making decisions based on false prices, with exploitable consequences.
 
-**Complexity and user error**: Sending funds to the wrong contract address, approving a malicious contract, misunderstanding a protocol's mechanics — user error in DeFi is permanent and unrecoverable.
+**Complexity and user error**: Sending funds to the wrong contract address, approving a malicious contract, misunderstanding a protocol's mechanics - user error in DeFi is permanent and unrecoverable.
 
 ## An honest summary
 
-DeFi represents a genuine experiment in rebuilding financial infrastructure on open, programmable rails. Some of it has demonstrated real product-market fit — peer-to-peer token exchange, in particular, is now a mature and heavily-used primitive.
+DeFi represents a genuine experiment in rebuilding financial infrastructure on open, programmable rails. Some of it has demonstrated real product-market fit - peer-to-peer token exchange, in particular, is now a mature and heavily-used primitive.
 
 But the risk profile is unlike anything in traditional finance. The appropriate level of engagement depends entirely on how much you understand the specific protocol you're using, and how much you're prepared to lose if something goes wrong.
 
 ---
 
-*This article is part of Chain 101 — our plain-English series covering crypto fundamentals.*
+*This article is part of Chain 101 - our plain-English series covering crypto fundamentals.*
