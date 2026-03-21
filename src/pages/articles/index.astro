@@ -5,7 +5,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const articles = await getCollection('articles', ({ data }) => data.status === 'live');
 articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
 
-const categories = [...new Set(articles.map(a => a.data.category))];
+const categories = [...new Set(articles.map(a => a.data.category))].sort();
+
+const articlesJson = JSON.stringify(articles.map(a => ({
+  slug: a.slug,
+  title: a.data.title,
+  description: a.data.description,
+  category: a.data.category,
+  publishedDate: a.data.publishedDate,
+})));
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -19,20 +27,25 @@ function formatDate(dateStr: string) {
   <div class="page-header">
     <div class="header-meta">
       <span class="header-tag">&gt; TRANSMISSION_ARCHIVE</span>
-      <span class="header-count">{articles.length} RECORDS</span>
+      <span class="header-count" id="record-count">{articles.length} RECORDS</span>
     </div>
     <h1 class="page-title">ARCHIVE</h1>
     <div class="category-bar">
+      <button class="cat-pill active" data-category="all">[ALL]</button>
       {categories.map(cat => (
-        <span class="cat-pill">[{cat}]</span>
+        <button class="cat-pill" data-category={cat}>[{cat}]</button>
       ))}
     </div>
   </div>
 
   {articles.length > 0 ? (
-    <div class="article-list">
+    <div class="article-list" id="article-list">
       {articles.map((article, i) => (
-        <a href={`/articles/${article.slug}`} class="article-row">
+        <a
+          href={`/articles/${article.slug}`}
+          class="article-row"
+          data-category={article.data.category}
+        >
           <div class="row-left">
             <span class="article-num">{String(i + 1).padStart(3, '0')}</span>
           </div>
@@ -54,13 +67,63 @@ function formatDate(dateStr: string) {
     <div class="empty-state">
       <p class="empty-code">// NO_RECORDS_FOUND</p>
       <p class="empty-sub">First transmission incoming. Subscribe for launch notification.</p>
-      <div class="subscribe-form" style="max-width:380px; margin-top: 1.5rem;">
-        <input type="email" placeholder="your@email.com" aria-label="Email address" />
-        <button class="btn">NOTIFY_ME</button>
-      </div>
     </div>
   )}
+
+  <div id="empty-filter" class="filter-empty" style="display:none">
+    <p class="empty-code">// NO_RECORDS_IN_CATEGORY</p>
+    <p class="empty-sub">No articles in this category yet. <button class="reset-link" id="reset-filter">Show all</button></p>
+  </div>
 </BaseLayout>
+
+<script define:vars={{ articlesJson }}>
+  const articles = JSON.parse(articlesJson);
+  const pills = document.querySelectorAll('.cat-pill');
+  const rows = document.querySelectorAll('.article-row');
+  const countEl = document.getElementById('record-count');
+  const emptyFilter = document.getElementById('empty-filter');
+  const articleList = document.getElementById('article-list');
+  const resetBtn = document.getElementById('reset-filter');
+
+  function filterBy(category) {
+    pills.forEach(p => p.classList.toggle('active', p.dataset.category === category));
+
+    let visible = 0;
+    rows.forEach(row => {
+      const match = category === 'all' || row.dataset.category === category;
+      row.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    countEl.textContent = visible + ' RECORDS';
+
+    if (visible === 0) {
+      articleList.style.display = 'none';
+      emptyFilter.style.display = 'block';
+    } else {
+      articleList.style.display = '';
+      emptyFilter.style.display = 'none';
+    }
+
+    // Renumber visible rows
+    let n = 1;
+    rows.forEach(row => {
+      if (row.style.display !== 'none') {
+        row.querySelector('.article-num').textContent = String(n++).padStart(3, '0');
+      }
+    });
+  }
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => filterBy(pill.dataset.category));
+  });
+
+  if (resetBtn) resetBtn.addEventListener('click', () => filterBy('all'));
+
+  // Activate category from URL hash, e.g. /articles#Market+Brief
+  const hash = decodeURIComponent(location.hash.slice(1));
+  if (hash && articles.some(a => a.category === hash)) filterBy(hash);
+</script>
 
 <style>
   .page-header {
@@ -111,11 +174,22 @@ function formatDate(dateStr: string) {
 
   .cat-pill {
     font-size: 0.6rem;
+    font-family: var(--font-mono);
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
     border: 1px solid var(--border-bright);
     padding: 0.2rem 0.6rem;
+    background: none;
+    cursor: pointer;
+    transition: color 0.12s, border-color 0.12s, background 0.12s;
+  }
+
+  .cat-pill:hover,
+  .cat-pill.active {
+    color: var(--neon);
+    border-color: var(--neon);
+    background: rgba(0, 255, 65, 0.06);
   }
 
   /* ── LIST ── */
@@ -226,11 +300,11 @@ function formatDate(dateStr: string) {
   }
 
   /* ── EMPTY ── */
-  .empty-state {
-    padding: 4rem 0;
+  .empty-state,
+  .filter-empty {
+    padding: 3rem 0 3rem 2rem;
     border: 1px solid var(--border-bright);
     border-left: 4px solid var(--neon);
-    padding-left: 2rem;
     margin-top: 2rem;
   }
 
@@ -240,11 +314,23 @@ function formatDate(dateStr: string) {
     letter-spacing: 0.1em;
     margin-bottom: 0.75rem;
     opacity: 0.7;
+    font-family: var(--font-mono);
   }
 
   .empty-sub {
     font-size: 0.875rem;
     color: var(--muted);
+  }
+
+  .reset-link {
+    background: none;
+    border: none;
+    color: var(--neon);
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    text-decoration: underline;
+    font-family: inherit;
   }
 
   @media (max-width: 600px) {

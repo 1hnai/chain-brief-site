@@ -218,38 +218,41 @@ const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
 
       /* ── SHARED COMPONENTS ── */
       .btn {
-        padding: 0.55rem 1.2rem;
+        padding: 0.55rem 1.4rem;
         font-family: var(--font-mono);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: 700;
         cursor: pointer;
         border: 2px solid var(--neon);
-        background: transparent;
-        color: var(--neon);
+        background: var(--neon);
+        color: var(--bg);
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.12em;
         transition: all 0.15s;
         white-space: nowrap;
         border-radius: 0;
+        flex-shrink: 0;
       }
 
       .btn:hover {
-        background: var(--neon);
-        color: var(--bg);
+        background: transparent;
+        color: var(--neon);
         box-shadow: var(--neon-glow);
       }
 
       .subscribe-form {
         display: flex;
         gap: 0;
+        max-width: 400px;
       }
 
-      .subscribe-form input {
+      .subscribe-form input[type="email"] {
         flex: 1;
+        min-width: 0;
         padding: 0.55rem 1rem;
         border: 2px solid var(--border-bright);
         border-right: none;
-        background: var(--surface);
+        background: var(--bg);
         color: var(--text);
         font-family: var(--font-mono);
         font-size: 0.8rem;
@@ -258,13 +261,24 @@ const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
         transition: border-color 0.15s;
       }
 
-      .subscribe-form input:focus {
+      .subscribe-form input[type="email"]:focus {
         border-color: var(--neon);
       }
 
-      .subscribe-form input::placeholder {
+      .subscribe-form input[type="email"]::placeholder {
         color: var(--muted);
+        opacity: 0.6;
       }
+
+      .subscribe-success {
+        display: none;
+        font-size: 0.78rem;
+        color: var(--neon);
+        letter-spacing: 0.05em;
+        padding: 0.55rem 0;
+      }
+
+      .subscribe-success::before { content: '✓ '; }
 
       /* ── SUBSCRIBE BAR ── */
       .subscribe-bar {
@@ -306,7 +320,7 @@ const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
       }
 
       .subscribe-bar .subscribe-form {
-        max-width: 420px;
+        max-width: 400px;
       }
 
       /* ── FOOTER ── */
@@ -369,6 +383,54 @@ const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
     <main>
       <slot />
     </main>
+
+    <script>
+      // Subscribe form handler — wire BEEHIIV_PUB_ID to enable real subscriptions
+      const BEEHIIV_PUB_ID = '';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.subscribe-form').forEach(form => {
+          const input = form.querySelector('input[type="email"]');
+          const btn = form.querySelector('.btn');
+          if (!input || !btn) return;
+
+          // Insert success message after form
+          const success = document.createElement('p');
+          success.className = 'subscribe-success';
+          success.textContent = "You're on the list. First issue landing soon.";
+          form.parentNode.insertBefore(success, form.nextSibling);
+
+          btn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const email = input.value.trim();
+            if (!email || !email.includes('@')) {
+              input.focus();
+              input.style.borderColor = '#ff0090';
+              setTimeout(() => input.style.borderColor = '', 1500);
+              return;
+            }
+
+            btn.textContent = '...';
+            btn.disabled = true;
+
+            try {
+              if (BEEHIIV_PUB_ID) {
+                await fetch(`https://api.beehiiv.com/v2/publications/${BEEHIIV_PUB_ID}/subscriptions`, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ email, reactivate_existing: true, send_welcome_email: true }),
+                });
+              }
+              form.style.display = 'none';
+              success.style.display = 'block';
+            } catch {
+              btn.textContent = 'SUBSCRIBE';
+              btn.disabled = false;
+            }
+          });
+        });
+      });
+    </script>
 
     <footer>
       <div class="footer-inner">
