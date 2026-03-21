@@ -8,10 +8,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Railway deployment
+      - uses: actions/checkout@v4
+
+      - name: Trigger Railway rebuild from latest commit
         run: |
-          curl -s -X POST https://backboard.railway.app/graphql/v2 \
+          COMMIT_SHA="${{ github.sha }}"
+          RESPONSE=$(curl -s -X POST https://backboard.railway.app/graphql/v2 \
             -H "Authorization: Bearer ${{ secrets.RAILWAY_API_TOKEN }}" \
             -H "Content-Type: application/json" \
-            -d '{"query":"mutation { serviceInstanceRedeploy(serviceId: \"d8f4d11b-aa62-4cf9-8657-94c318677acf\", environmentId: \"8fb5924d-b3cb-40dd-8b84-cff9df14f052\") }"}' \
-            | grep -q '"serviceInstanceRedeploy":true' && echo "Deploy triggered ✓" || echo "Deploy failed"
+            -d "{\"query\":\"mutation { serviceInstanceDeployV2(serviceId: \\\"d8f4d11b-aa62-4cf9-8657-94c318677acf\\\", environmentId: \\\"8fb5924d-b3cb-40dd-8b84-cff9df14f052\\\", commitSha: \\\"$COMMIT_SHA\\\") }\"}")
+          echo "Railway response: $RESPONSE"
+          echo "$RESPONSE" | grep -q '"serviceInstanceDeployV2"' && echo "Build triggered ✓ for commit $COMMIT_SHA" || echo "Deploy mutation failed — response: $RESPONSE"
