@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const allArticles = await getCollection('articles', ({ data }) => data.status === 'live');
 allArticles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
-const latestArticles = allArticles.slice(0, 5);
+const latestArticles = allArticles.slice(0, 6);
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -15,187 +15,292 @@ function formatDate(dateStr: string) {
   title="Chain Brief"
   description="Crypto made clear — from first principles to the latest signals. The independent crypto briefing for curious, intelligent readers."
 >
+  <!-- HERO -->
   <section class="hero">
-    <p class="hero-label">Crypto Intelligence</p>
+    <div class="hero-tag">&gt; CHAIN_BRIEF://SIGNAL_INCOMING</div>
     <h1 class="hero-headline">
-      Crypto made clear —<br>from first principles to the latest signals.
+      CRYPTO<br />MADE<br />CLEAR
     </h1>
-    <p class="hero-sub">
-      Whether you're new to crypto or deep in the ecosystem, Chain Brief gives you the
-      <strong>clearest possible read</strong> on what's happening and why it matters.
-      No trading advice. Just signal.
-    </p>
-    <div class="subscribe-form hero-form">
-      <input type="email" placeholder="your@email.com" aria-label="Email address" />
-      <button class="btn">Subscribe free</button>
+    <div class="hero-sub-wrap">
+      <p class="hero-sub">
+        From first principles to the latest signals. Independent. No trading advice. Just signal.
+      </p>
+      <div class="hero-form">
+        <div class="subscribe-form">
+          <input type="email" placeholder="your@email.com" aria-label="Email address" />
+          <button class="btn">SUBSCRIBE_FREE</button>
+        </div>
+        <p class="hero-note">// FREE. INDEPENDENT. NO FINANCIAL ADVICE.</p>
+      </div>
     </div>
-    <p class="hero-note">Free. Independent. Not financial advice.</p>
+    <div class="hero-status-bar">
+      <span class="status-pill green">● BROADCASTING</span>
+      <span class="status-item">ARTICLES: {allArticles.length}</span>
+      <span class="status-item">FREQ: 8x/DAY</span>
+      <span class="status-item">COST: $0.00</span>
+    </div>
   </section>
 
-  <hr class="divider" />
-
+  <!-- COVERAGE -->
   <section class="coverage">
-    <h2 class="section-label">What we cover</h2>
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">COVERAGE_MATRIX</h2>
+    </div>
     <div class="coverage-grid">
       <div class="coverage-card">
-        <div class="coverage-icon">📰</div>
-        <h3>Daily Market Brief</h3>
-        <p>The day's crypto news that matters — summarised clearly, without the noise.</p>
+        <div class="card-tag magenta">DAILY</div>
+        <h3>Market Brief</h3>
+        <p>The day's crypto signal — cleared of noise, stripped to what matters.</p>
       </div>
       <div class="coverage-card">
-        <div class="coverage-icon">🎓</div>
+        <div class="card-tag neon">EXPLAINER</div>
         <h3>Chain 101</h3>
-        <p>Beginner guides: blockchains, wallets, DeFi, Layer 2s — explained from first principles.</p>
+        <p>Blockchains, wallets, DeFi, Layer 2s — first principles, no jargon.</p>
       </div>
       <div class="coverage-card">
-        <div class="coverage-icon">🔍</div>
-        <h3>Protocol Deep Dives</h3>
-        <p>Weekly analysis on major protocols, on-chain movements, and ecosystem developments.</p>
+        <div class="card-tag green">DEEP DIVE</div>
+        <h3>Protocol Analysis</h3>
+        <p>Weekly dissection of major protocols, on-chain movements, ecosystem shifts.</p>
       </div>
     </div>
   </section>
 
+  <!-- LATEST ARTICLES -->
   {latestArticles.length > 0 ? (
     <section class="latest">
-      <h2 class="section-label">Latest Articles</h2>
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2 class="section-title">LATEST_TRANSMISSIONS</h2>
+      </div>
       <div class="article-list">
-        {latestArticles.map(article => (
+        {latestArticles.map((article, i) => (
           <a href={`/articles/${article.slug}`} class="article-row">
-            <div class="article-info">
+            <span class="article-num">{"0" + (i + 1)}</span>
+            <div class="article-body">
               <div class="article-meta">
-                <span class="article-cat">{article.data.category}</span>
+                <span class="cat-tag">[{article.data.category}]</span>
                 <span class="article-date">{formatDate(article.data.publishedDate)}</span>
               </div>
               <h3 class="article-title">{article.data.title}</h3>
               <p class="article-desc">{article.data.description}</p>
             </div>
-            <div class="article-arrow" aria-hidden="true">&#8594;</div>
+            <span class="article-arrow">&rarr;</span>
           </a>
         ))}
       </div>
-      <a href="/articles" class="all-link">View all articles &rarr;</a>
+      <a href="/articles" class="all-link">&gt; VIEW_ALL_TRANSMISSIONS ({allArticles.length})</a>
     </section>
-  ) : (
-    <section class="latest">
-      <h2 class="section-label">Latest Articles</h2>
-      <p class="coming-soon">First issue coming soon. <a href="/articles">Browse the archive</a> once we launch.</p>
-    </section>
-  )}
+  ) : null}
 
+  <!-- SUBSCRIBE -->
   <div class="subscribe-bar">
-    <h2>Get crypto made clear, every day.</h2>
-    <p>Independent editorial. Not financial advice. Unsubscribe any time.</p>
+    <h2>GET THE SIGNAL. DAILY.</h2>
+    <p>// independent editorial — not financial advice — unsubscribe any time</p>
     <div class="subscribe-form">
       <input type="email" placeholder="your@email.com" aria-label="Email address" />
-      <button class="btn">Subscribe — it's free</button>
+      <button class="btn">SUBSCRIBE_FREE</button>
     </div>
   </div>
 </BaseLayout>
 
 <style>
+  /* ── HERO ── */
   .hero {
-    text-align: center;
-    padding: 4rem 0 3rem;
+    padding: 3.5rem 0 3rem;
+    border-bottom: 1px solid var(--border-bright);
+    margin-bottom: 3rem;
   }
 
-  .hero-label {
-    font-size: 0.85rem;
-    font-weight: 600;
+  .hero-tag {
+    font-size: 0.7rem;
+    color: var(--neon);
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--brand-accent);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
   }
 
   .hero-headline {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.03em;
-    margin-bottom: 1.25rem;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(4rem, 12vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-shadow: var(--neon-glow);
+  }
+
+  .hero-sub-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 2rem;
   }
 
   .hero-sub {
-    font-size: 1.1rem;
-    color: var(--brand-muted);
-    max-width: 520px;
-    margin: 0 auto 2.5rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
   }
 
-  .hero-sub strong { color: var(--brand-text); }
-
-  .hero-form {
-    max-width: 420px;
-    margin: 0 auto;
-  }
+  .hero-form { display: flex; flex-direction: column; gap: 0.5rem; }
 
   .hero-note {
-    font-size: 0.8rem;
-    color: var(--brand-muted);
-    margin-top: 0.75rem;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
   }
 
-  .divider {
-    border: none;
-    border-top: 1px solid var(--brand-border);
-    margin: 2rem 0;
+  .hero-status-bar {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
   }
 
-  .section-label {
+  .status-pill {
+    letter-spacing: 0.12em;
+  }
+
+  .status-pill.green { color: var(--green); }
+  .status-item { color: var(--muted); }
+
+  /* ── SECTION HEADS ── */
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-bright);
+  }
+
+  .section-num {
+    font-size: 0.65rem;
+    color: var(--neon);
+    letter-spacing: 0.1em;
+    font-family: var(--font-mono);
+    opacity: 0.6;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
     font-size: 0.85rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--brand-muted);
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    color: var(--muted);
   }
 
-  .coverage { margin: 3rem 0; }
+  /* ── COVERAGE ── */
+  .coverage { margin-bottom: 3rem; }
 
   .coverage-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--border-bright);
   }
 
   .coverage-card {
-    background: var(--brand-surface);
-    border: 1px solid var(--brand-border);
-    border-radius: 10px;
-    padding: 1.25rem;
+    padding: 1.5rem;
+    border-right: 1px solid var(--border-bright);
+    transition: background 0.15s;
   }
 
-  .coverage-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .coverage-card:last-child { border-right: none; }
+  .coverage-card:hover { background: var(--surface); }
+
+  .card-tag {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+  }
+
+  .card-tag.neon { color: var(--neon); }
+  .card-tag.magenta { color: var(--magenta); }
+  .card-tag.green { color: var(--green); }
 
   .coverage-card h3 {
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-    font-size: 0.95rem;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: var(--text);
   }
 
   .coverage-card p {
-    font-size: 0.9rem;
-    color: var(--brand-muted);
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.6;
   }
 
-  .latest { margin: 3rem 0; }
+  /* ── ARTICLE LIST ── */
+  .latest { margin-bottom: 3rem; }
 
-  .article-list { display: flex; flex-direction: column; }
+  .article-list { display: flex; flex-direction: column; border: 1px solid var(--border-bright); border-bottom: none; }
 
   .article-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto;
     gap: 1rem;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid var(--brand-border);
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid var(--border-bright);
     text-decoration: none;
     color: inherit;
-    align-items: flex-start;
+    align-items: center;
+    transition: background 0.1s;
+    position: relative;
   }
 
-  .article-row:first-child { padding-top: 0; }
-  .article-row:hover .article-title { color: var(--brand-accent); }
+  .article-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--neon);
+    transform: scaleY(0);
+    transition: transform 0.15s;
+  }
 
-  .article-info { flex: 1; min-width: 0; }
+  .article-row:hover {
+    background: var(--surface);
+  }
+
+  .article-row:hover::before {
+    transform: scaleY(1);
+  }
+
+  .article-num {
+    font-size: 0.7rem;
+    color: var(--neon);
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+    align-self: start;
+    padding-top: 0.1rem;
+  }
+
+  .article-body { min-width: 0; }
 
   .article-meta {
     display: flex;
@@ -204,69 +309,81 @@ function formatDate(dateStr: string) {
     margin-bottom: 0.3rem;
   }
 
-  .article-cat {
-    font-size: 0.625rem;
-    font-weight: 600;
+  .cat-tag {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--neon);
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--brand-accent);
   }
 
   .article-date {
-    font-size: 0.75rem;
-    color: var(--brand-muted);
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
   }
 
   .article-title {
-    font-size: 1rem;
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: var(--text);
     margin-bottom: 0.3rem;
-    line-height: 1.35;
-    color: var(--brand-text);
-    transition: color 0.15s;
+    transition: color 0.1s;
   }
 
+  .article-row:hover .article-title { color: var(--neon); }
+
   .article-desc {
-    font-size: 0.85rem;
-    color: var(--brand-muted);
+    font-size: 0.75rem;
+    color: var(--muted);
     line-height: 1.5;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
   .article-arrow {
-    color: var(--brand-border);
+    color: var(--muted);
     font-size: 1rem;
-    align-self: center;
     flex-shrink: 0;
-    transition: color 0.15s, transform 0.15s;
+    transition: color 0.1s, transform 0.1s;
   }
 
   .article-row:hover .article-arrow {
-    color: var(--brand-accent);
+    color: var(--neon);
     transform: translateX(3px);
   }
 
   .all-link {
     display: inline-block;
-    margin-top: 1.25rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--brand-accent-light);
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--neon);
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+
+  .all-link:hover {
+    border-color: var(--neon);
     text-decoration: none;
   }
 
-  .all-link:hover { text-decoration: underline; }
-
-  .coming-soon {
-    color: var(--brand-muted);
-    font-style: italic;
-  }
-
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
+    .hero-sub-wrap { grid-template-columns: 1fr; }
+    .hero-headline { font-size: clamp(3.5rem, 15vw, 5rem); }
+    .coverage-grid { grid-template-columns: 1fr; }
+    .coverage-card { border-right: none; border-bottom: 1px solid var(--border-bright); }
+    .article-row { grid-template-columns: 2rem 1fr; }
     .article-arrow { display: none; }
     .article-desc { display: none; }
+    .hero-status-bar { gap: 1rem; }
   }
 </style>

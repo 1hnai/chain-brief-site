@@ -5,43 +5,58 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const articles = await getCollection('articles', ({ data }) => data.status === 'live');
 articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
 
+const categories = [...new Set(articles.map(a => a.data.category))];
+
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 ---
 
 <BaseLayout
-  title="Articles — Chain Brief"
+  title="Archive — Chain Brief"
   description="Crypto explainers, protocol deep dives, and market briefs from Chain Brief."
 >
   <div class="page-header">
-    <h1 class="page-title">Articles</h1>
-    <p class="page-sub">Crypto explainers, protocol deep dives, and weekly market briefs.</p>
+    <div class="header-meta">
+      <span class="header-tag">&gt; TRANSMISSION_ARCHIVE</span>
+      <span class="header-count">{articles.length} RECORDS</span>
+    </div>
+    <h1 class="page-title">ARCHIVE</h1>
+    <div class="category-bar">
+      {categories.map(cat => (
+        <span class="cat-pill">[{cat}]</span>
+      ))}
+    </div>
   </div>
 
   {articles.length > 0 ? (
     <div class="article-list">
-      {articles.map(article => (
+      {articles.map((article, i) => (
         <a href={`/articles/${article.slug}`} class="article-row">
-          <div class="article-info">
+          <div class="row-left">
+            <span class="article-num">{String(i + 1).padStart(3, '0')}</span>
+          </div>
+          <div class="article-body">
             <div class="article-meta">
-              <span class="article-cat">{article.data.category}</span>
+              <span class="cat-tag">[{article.data.category}]</span>
               <span class="article-date">{formatDate(article.data.publishedDate)}</span>
             </div>
             <h2 class="article-title">{article.data.title}</h2>
             <p class="article-desc">{article.data.description}</p>
           </div>
-          <div class="article-arrow" aria-hidden="true">&#8594;</div>
+          <div class="row-right">
+            <span class="article-arrow">→</span>
+          </div>
         </a>
       ))}
     </div>
   ) : (
     <div class="empty-state">
-      <p class="empty-title">First article coming soon</p>
-      <p class="empty-sub">Subscribe to get notified when we launch.</p>
-      <div class="subscribe-form" style="margin:1.5rem auto 0; max-width:380px;">
+      <p class="empty-code">// NO_RECORDS_FOUND</p>
+      <p class="empty-sub">First transmission incoming. Subscribe for launch notification.</p>
+      <div class="subscribe-form" style="max-width:380px; margin-top: 1.5rem;">
         <input type="email" placeholder="your@email.com" aria-label="Email address" />
-        <button class="btn">Notify me</button>
+        <button class="btn">NOTIFY_ME</button>
       </div>
     </div>
   )}
@@ -49,114 +64,192 @@ function formatDate(dateStr: string) {
 
 <style>
   .page-header {
-    padding: 2rem 0 2.5rem;
-    border-bottom: 1px solid var(--brand-border);
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-bright);
+    margin-bottom: 0;
+  }
+
+  .header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .header-tag {
+    font-size: 0.65rem;
+    color: var(--neon);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .header-count {
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 
   .page-title {
-    font-size: 1.75rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.4rem;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--text);
+    text-shadow: var(--neon-glow);
+    margin-bottom: 1.25rem;
   }
 
-  .page-sub {
-    color: var(--brand-muted);
-    font-size: 0.9375rem;
+  .category-bar {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
+  .cat-pill {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--border-bright);
+    padding: 0.2rem 0.6rem;
+  }
+
+  /* ── LIST ── */
   .article-list {
     display: flex;
     flex-direction: column;
+    border-left: 1px solid var(--border-bright);
+    border-right: 1px solid var(--border-bright);
   }
 
   .article-row {
-    display: flex;
-    gap: 1rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--brand-border);
+    display: grid;
+    grid-template-columns: 3.5rem 1fr 2rem;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--border-bright);
     text-decoration: none;
     color: inherit;
-    align-items: flex-start;
+    align-items: center;
+    transition: background 0.1s;
+    position: relative;
+    gap: 1rem;
   }
 
-  .article-row:first-child { padding-top: 0; }
-  .article-row:hover .article-title { color: var(--brand-accent); }
+  .article-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--neon);
+    transform: scaleY(0);
+    transition: transform 0.15s;
+    box-shadow: var(--neon-glow);
+  }
 
-  .article-info { flex: 1; min-width: 0; }
+  .article-row:hover { background: var(--surface); }
+  .article-row:hover::before { transform: scaleY(1); }
+
+  .row-left { display: flex; align-items: flex-start; padding-top: 0.1rem; }
+
+  .article-num {
+    font-size: 0.65rem;
+    color: var(--neon);
+    opacity: 0.4;
+    letter-spacing: 0.05em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .article-body { min-width: 0; }
 
   .article-meta {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.35rem;
   }
 
-  .article-cat {
-    font-size: 0.675rem;
-    font-weight: 600;
+  .cat-tag {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--neon);
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--brand-accent);
   }
 
   .article-date {
-    font-size: 0.75rem;
-    color: var(--brand-muted);
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
   }
 
   .article-title {
+    font-family: var(--font-display);
     font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-    line-height: 1.3;
-    color: var(--brand-text);
-    transition: color 0.15s;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 0.35rem;
+    transition: color 0.1s;
   }
 
+  .article-row:hover .article-title { color: var(--neon); }
+
   .article-desc {
-    font-size: 0.875rem;
-    color: var(--brand-muted);
-    line-height: 1.55;
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
+  .row-right { display: flex; align-items: center; justify-content: flex-end; }
+
   .article-arrow {
-    color: var(--brand-border);
-    font-size: 1.1rem;
-    align-self: center;
-    flex-shrink: 0;
-    transition: color 0.15s, transform 0.15s;
+    color: var(--muted);
+    font-size: 1rem;
+    transition: color 0.1s, transform 0.1s;
   }
 
   .article-row:hover .article-arrow {
-    color: var(--brand-accent);
+    color: var(--neon);
     transform: translateX(3px);
   }
 
+  /* ── EMPTY ── */
   .empty-state {
-    text-align: center;
     padding: 4rem 0;
-    border: 1px dashed var(--brand-border);
-    border-radius: 12px;
+    border: 1px solid var(--border-bright);
+    border-left: 4px solid var(--neon);
+    padding-left: 2rem;
+    margin-top: 2rem;
   }
 
-  .empty-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+  .empty-code {
+    font-size: 0.75rem;
+    color: var(--neon);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+    opacity: 0.7;
   }
 
   .empty-sub {
-    color: var(--brand-muted);
+    font-size: 0.875rem;
+    color: var(--muted);
   }
 
   @media (max-width: 600px) {
-    .article-arrow { display: none; }
-    .article-desc { display: none; }
+    .article-row { grid-template-columns: 2.5rem 1fr; }
+    .row-right { display: none; }
+    .article-desc { -webkit-line-clamp: 1; }
   }
 </style>

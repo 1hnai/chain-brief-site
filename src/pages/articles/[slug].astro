@@ -21,34 +21,45 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
 
 <BaseLayout title={title} description={description} article={true} publishedDate={publishedDate}>
   <article class="article-wrap">
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+      <a href="/articles">&lt; ARCHIVE</a>
+      <span class="bc-sep">//</span>
+      <span class="bc-cat">[{category}]</span>
+    </nav>
+
+    <!-- HEADER -->
     <div class="article-header">
-      <div class="article-meta">
-        <a href="/articles" class="meta-back">Articles</a>
-        <span class="meta-sep">/</span>
-        <span class="meta-cat">{category}</span>
-      </div>
       <h1 class="article-title">{title}</h1>
       <div class="article-byline">
-        <span class="article-date">{formattedDate}</span>
-        {author && <><span class="byline-sep">·</span><span class="article-author">{author}</span></>}
+        <span class="byline-date">{formattedDate}</span>
+        {author && <><span class="byline-sep">—</span><span class="byline-author">{author}</span></>}
+        <span class="byline-sep">—</span>
+        <span class="byline-cat">[{category}]</span>
       </div>
+      <p class="article-desc">{description}</p>
     </div>
 
+    <!-- BODY -->
     <div class="article-body">
       <Content />
     </div>
 
+    <!-- FOOTER -->
     <div class="article-footer">
-      <p class="disclaimer">This is not financial advice. Chain Brief is an independent editorial publication.</p>
+      <span class="footer-label">// END_TRANSMISSION</span>
+      <p class="disclaimer">NOT FINANCIAL ADVICE. Chain Brief is an independent editorial publication. Nothing published here constitutes investment advice or a recommendation to buy or sell any asset.</p>
     </div>
+
   </article>
 
   <div class="subscribe-bar">
-    <h2>Get crypto made clear, every day.</h2>
-    <p>Independent editorial. Not financial advice. Unsubscribe any time.</p>
+    <h2>GET THE SIGNAL. DAILY.</h2>
+    <p>// independent editorial — not financial advice — unsubscribe any time</p>
     <div class="subscribe-form">
       <input type="email" placeholder="your@email.com" aria-label="Email address" />
-      <button class="btn">Subscribe — it's free</button>
+      <button class="btn">SUBSCRIBE_FREE</button>
     </div>
   </div>
 </BaseLayout>
@@ -59,130 +70,224 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     margin: 0 auto;
   }
 
-  .article-header {
-    padding: 2rem 0 2rem;
-    border-bottom: 1px solid var(--brand-border);
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1.5rem 0 0;
     margin-bottom: 2rem;
   }
 
-  .article-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.75rem;
-    margin-bottom: 1.25rem;
+  .breadcrumb a {
+    color: var(--muted);
+    transition: color 0.1s;
   }
 
-  .meta-back {
-    color: var(--brand-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 500;
-    font-size: 0.7rem;
+  .breadcrumb a:hover {
+    color: var(--neon);
+    text-decoration: none;
   }
 
-  .meta-back:hover { color: var(--brand-text); text-decoration: none; }
+  .bc-sep { color: var(--border-bright); }
+  .bc-cat { color: var(--neon); opacity: 0.7; }
 
-  .meta-sep { color: var(--brand-border); }
+  /* ── HEADER ── */
+  .article-header {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-bright);
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
 
-  .meta-cat {
-    color: var(--brand-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 600;
-    font-size: 0.7rem;
+  .article-header::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--neon);
+    box-shadow: var(--neon-glow);
   }
 
   .article-title {
-    font-size: clamp(1.6rem, 4vw, 2.25rem);
-    font-weight: 800;
-    letter-spacing: -0.025em;
-    line-height: 1.2;
-    color: var(--brand-text);
-    margin-bottom: 0.75rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 5vw, 2.75rem);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 1rem;
+    text-shadow: var(--neon-glow);
   }
 
   .article-byline {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.8125rem;
-    color: var(--brand-muted);
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
   }
 
-  .byline-sep { color: var(--brand-border); }
+  .byline-sep { color: var(--border-bright); }
+  .byline-cat { color: var(--neon); opacity: 0.7; }
+
+  .article-desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.65;
+    border-left: 2px solid var(--border-bright);
+    padding-left: 1rem;
+  }
+
+  /* ── BODY ── */
+  .article-body {
+    font-size: 0.9375rem;
+    line-height: 1.85;
+  }
 
   .article-body :global(p) {
-    margin-bottom: 1.25rem;
-    font-size: 1.0625rem;
-    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text);
   }
 
   .article-body :global(h2) {
-    font-size: 1.35rem;
-    font-weight: 700;
-    margin: 2.5rem 0 0.75rem;
-    letter-spacing: -0.015em;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin: 3rem 0 1rem;
+    color: var(--text);
+    border-left: 3px solid var(--neon);
+    padding-left: 0.75rem;
   }
 
   .article-body :global(h3) {
-    font-size: 1.1rem;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
     font-weight: 700;
-    margin: 2rem 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2rem 0 0.75rem;
+    color: var(--neon);
   }
 
   .article-body :global(ul),
   .article-body :global(ol) {
-    margin: 0.5rem 0 1.25rem 1.5rem;
+    margin: 0.5rem 0 1.5rem 1.25rem;
   }
 
   .article-body :global(li) {
-    margin-bottom: 0.4rem;
-    font-size: 1.0625rem;
-    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.75;
   }
 
-  .article-body :global(strong) { font-weight: 700; }
+  .article-body :global(ul li::marker) {
+    color: var(--neon);
+  }
+
+  .article-body :global(strong) {
+    font-weight: 700;
+    color: var(--text);
+  }
 
   .article-body :global(hr) {
     border: none;
-    border-top: 1px solid var(--brand-border);
+    border-top: 1px solid var(--border-bright);
     margin: 2.5rem 0;
   }
 
   .article-body :global(a) {
-    color: var(--brand-accent-light);
+    color: var(--neon);
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(0,245,255,0.4);
   }
 
-  .article-body :global(a:hover) { opacity: 0.8; }
+  .article-body :global(a:hover) {
+    color: #fff;
+    text-decoration-color: #fff;
+  }
 
   .article-body :global(blockquote) {
-    border-left: 3px solid var(--brand-accent);
-    padding-left: 1.25rem;
-    color: var(--brand-muted);
-    margin: 1.5rem 0;
-    font-style: italic;
+    border-left: 3px solid var(--neon);
+    padding: 0.75rem 1.25rem;
+    color: var(--muted);
+    margin: 2rem 0;
+    background: var(--surface);
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  .article-body :global(blockquote::before) {
+    content: '// ';
+    color: var(--neon);
+    opacity: 0.5;
   }
 
   .article-body :global(code) {
-    background: var(--brand-surface);
-    padding: 0.15em 0.4em;
-    border-radius: 3px;
-    font-size: 0.9em;
-    font-family: 'Courier New', monospace;
+    background: var(--surface2);
+    border: 1px solid var(--border-bright);
+    padding: 0.15em 0.45em;
+    font-size: 0.85em;
+    font-family: var(--font-mono);
+    color: var(--green);
   }
 
+  .article-body :global(pre) {
+    background: var(--surface);
+    border: 1px solid var(--border-bright);
+    border-left: 3px solid var(--neon);
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  .article-body :global(pre code) {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.85rem;
+  }
+
+  /* ── FOOTER ── */
   .article-footer {
     margin-top: 3rem;
     padding-top: 1.5rem;
-    border-top: 1px solid var(--brand-border);
+    border-top: 1px solid var(--border-bright);
+  }
+
+  .footer-label {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--neon);
+    letter-spacing: 0.15em;
+    opacity: 0.5;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
   }
 
   .disclaimer {
-    font-size: 0.75rem;
-    color: var(--brand-muted);
-    font-style: italic;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 600px) {
+    .article-header::before { display: none; }
+    .article-title { font-size: clamp(1.6rem, 8vw, 2rem); }
+    .article-byline { flex-wrap: wrap; }
   }
 </style>
