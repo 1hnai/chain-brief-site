@@ -51,3 +51,19 @@
 - **what-is-a-layer-2**: Conceptual; EIP-4844 March 2024 correct; 7-day challenge window standard — accurate.
 - **what-is-mev**: "2019 paper by Phil Daian and colleagues" — confirmed (arXiv April 2019); renamed from "miner" to "maximal" when Ethereum moved to PoS — confirmed.
 - **week-in-crypto-march-17-21-2026**: BTC ~$95,200 Friday; ETH $2,850–$3,050 range; total market cap ~$3.4T; Franklin Templeton Solana ETF filing; Osaka testnet April 8 date — these are reported figures for the week, flagged only the Pectra date (fixed above).
+
+---
+
+## Update — 2026-03-22 (second run)
+## New articles checked: 2
+## New issues found: 2
+
+### CRITICAL
+- **berachain-proof-of-liquidity-deep-dive**: Article stated Berachain "went live on February 6, 2026" — INCORRECT. Confirmed via CoinDesk, The Defiant, and Blockworks that mainnet launched **February 6, 2025**. The description frontmatter also referenced "February 2026". Both fixed directly. Also changed "two-year public testnet period" to "roughly two-year public testnet period" for precision.
+
+### STALE
+- **ton-telegram-network-analysis-2026**: Article cited "roughly 950 million monthly active users" — this figure is from July 2024; Telegram publicly announced 1 billion MAUs by March 2025. Flagged with HTML comment; article author should decide whether to update the figure.
+
+### CLEAN
+- **berachain-proof-of-liquidity-deep-dive**: All other claims verified — $100M Series B at $1.5B valuation, April 2024 (CORRECT); Polychain Capital, Framework Ventures, Hack VC as investors (CORRECT — lead investors were Brevan Howard Digital and Framework Ventures, but all named were participants); BEX/Bend/Berps as native apps (CORRECT); Cosmos SDK / EVM execution environment (CORRECT).
+- **ton-telegram-network-analysis-2026**: SEC suit 2019 and settlement 2020 with $18.5M penalties and $1.2B returned (CORRECT); Notcoin 35M+ players, NOT launched May 2024 (CORRECT); Hamster Kombat 300M+ users, HMSTR September 2024 (CORRECT); Pavel Durov arrested Le Bourget August 2024 (CORRECT); STON.fi and DeDust as dominant TON DEXes (consistent with available sources).

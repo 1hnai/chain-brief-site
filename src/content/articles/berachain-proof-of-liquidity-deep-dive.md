@@ -1,13 +1,15 @@
 ---
 title: "Berachain's Proof of Liquidity: What the New Consensus Model Actually Does"
-description: "Berachain launched mainnet in February 2026 with a novel consensus mechanism that ties validator rewards directly to protocol liquidity. Here's how it works and where the risks are."
+description: "Berachain launched mainnet in February 2025 with a novel consensus mechanism that ties validator rewards directly to protocol liquidity. Here's how it works and where the risks are."
 category: "Deep Dive"
 publishedDate: "2026-03-22"
 status: "draft"
 author: "Chain Brief"
 ---
 
-Berachain went live on February 6, 2026, ending a two-year public testnet period that drew more developer attention than most chains see after launch. The project raised a reported $100 million in a Series B round at a $1.5 billion valuation in April 2024, backed by Polychain Capital, Framework Ventures, and Hack VC. The marketing was loud. The mechanism, however, is worth understanding on its own terms.
+<!-- FACT-CHECK: fixed — launch date was February 6, 2025 (not 2026); description also updated to match -->
+
+Berachain went live on February 6, 2025, ending a roughly two-year public testnet period that drew more developer attention than most chains see after launch. The project raised a reported $100 million in a Series B round at a $1.5 billion valuation in April 2024, backed by Polychain Capital, Framework Ventures, and Hack VC. The marketing was loud. The mechanism, however, is worth understanding on its own terms.
 
 The core idea is called Proof of Liquidity. It keeps a validator-based consensus structure but changes what drives validator rewards. If you've dismissed Berachain as another Cosmos chain with better branding, this is the part that deserves a second look.
 

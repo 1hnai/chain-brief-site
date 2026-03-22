@@ -7,7 +7,7 @@ status: "draft"
 author: "Chain Brief"
 ---
 
-Telegram has roughly 950 million monthly active users, making it one of the three largest messaging platforms in the world. The Open Network (TON) is the blockchain built into it. By any measure of distribution potential, TON should be winning. The gap between that potential and what the on-chain data actually shows is the more interesting story.
+Telegram has roughly 950 million monthly active users<!-- STALE: figure is from July 2024; Telegram reached 1 billion MAUs by March 2025 — consider updating -->, making it one of the three largest messaging platforms in the world. The Open Network (TON) is the blockchain built into it. By any measure of distribution potential, TON should be winning. The gap between that potential and what the on-chain data actually shows is the more interesting story.
 
 ## The Origin and the Rebuild
 
