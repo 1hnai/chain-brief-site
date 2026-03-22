@@ -11,8 +11,6 @@ A zero-knowledge proof is a way of proving you know something without revealing 
 
 Cryptographers have been working with ZK proofs since the 1980s. In crypto, they have become one of the most important technologies of the last five years, powering Layer 2 scaling on Ethereum, private transactions on chains like Zcash, and experiments in digital identity.
 
-Understanding them is worth your time.
-
 ## The Core Idea
 
 The classic illustration is a cave with two exits connected by a secret door. You want to prove to a friend that you know the password to open that door, but without telling them the password.
@@ -29,7 +27,7 @@ In practice, crypto uses two families of ZK proofs.
 
 **zk-SNARKs** (Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge) are compact and fast to verify. The catch is a "trusted setup": generating the system requires an initial ceremony where participants must honestly destroy certain parameters. If those parameters are ever leaked or retained, the system can be compromised. Zcash and early versions of several Ethereum rollups used zk-SNARKs.
 
-**zk-STARKs** (Scalable Transparent Arguments of Knowledge) eliminate the trusted setup requirement entirely. They rely only on hash functions, which are well-understood and do not require trusting any ceremony participants. STARKs produce larger proofs than SNARKs, which means more bytes on-chain, but they are generally considered more trustworthy from a cryptographic assumptions standpoint. StarkNet uses them.
+**zk-STARKs** (Scalable Transparent Arguments of Knowledge) eliminate the trusted setup requirement entirely. They rely only on hash functions, which are well-understood and do not require trusting any ceremony participants. STARKs produce larger proofs than SNARKs, which means more bytes on-chain, but they require weaker cryptographic assumptions and no trusted setup, which makes them more auditable in practice. StarkNet uses them.
 
 The gap between the two is narrowing. Newer constructions like Plonk and Groth16 have reduced SNARK proof sizes and improved the trusted-setup process significantly.
 
