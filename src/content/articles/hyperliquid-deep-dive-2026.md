@@ -3,7 +3,7 @@ title: "Hyperliquid: The Perp DEX That Took the Fight to Binance"
 description: "Hyperliquid built a decentralized perpetuals exchange fast enough to pull real trading volume from centralized competitors. The JELLY incident revealed how much of that decentralization is real."
 category: "Deep Dive"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

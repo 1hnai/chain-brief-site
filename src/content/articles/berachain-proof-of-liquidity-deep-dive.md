@@ -3,7 +3,7 @@ title: "Berachain's Proof of Liquidity: What the New Consensus Model Actually Do
 description: "Berachain launched mainnet in February 2025 with a novel consensus mechanism that ties validator rewards directly to protocol liquidity. Here's how it works and where the risks are."
 category: "Deep Dive"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

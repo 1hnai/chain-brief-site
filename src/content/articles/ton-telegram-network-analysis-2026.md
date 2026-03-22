@@ -3,7 +3,7 @@ title: "TON Has the Best Distribution in Crypto. The On-Chain Numbers Tell a Dif
 description: "The Open Network sits inside Telegram, which has roughly 950 million monthly active users. Converting them to on-chain participants has proved harder than the viral gaming numbers suggested."
 category: "Analysis"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

@@ -3,7 +3,7 @@ title: "What Is a Crypto Oracle?"
 description: "Blockchains can't read the outside world. Oracles solve that problem — and create new ones."
 category: "Chain 101"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

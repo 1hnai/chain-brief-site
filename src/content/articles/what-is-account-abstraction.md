@@ -3,7 +3,7 @@ title: "What Is Account Abstraction?"
 description: "Account abstraction replaces rigid crypto wallets with programmable smart accounts. Here is how it works, why it matters, and what is already built on it."
 category: "Chain 101"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

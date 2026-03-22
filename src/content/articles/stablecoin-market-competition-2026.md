@@ -3,7 +3,7 @@ title: "Stablecoin Wars 2026: Who Is Actually Winning?"
 description: "Tether still leads, but yield-bearing stablecoins and US regulation are reshaping the competitive structure of a $200 billion market."
 category: "Analysis"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

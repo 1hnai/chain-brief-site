@@ -3,7 +3,7 @@ title: "What Is a Stablecoin?"
 description: "Stablecoins are the part of crypto that acts like normal money. Here is how they work, why they exist in three different forms, and what can go wrong with each."
 category: "Chain 101"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

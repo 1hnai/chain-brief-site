@@ -3,7 +3,7 @@ title: "What Is a Zero-Knowledge Proof?"
 description: "Zero-knowledge proofs let you prove something is true without revealing why. Here is how they work and why they matter for crypto."
 category: "Chain 101"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

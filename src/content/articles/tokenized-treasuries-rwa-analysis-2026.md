@@ -3,7 +3,7 @@ title: "Tokenized Treasuries: Crypto's Quietest Product-Market Fit"
 description: "BlackRock, Franklin Templeton, and Ondo Finance have put billions in US Treasuries on-chain. Here is what is driving it, who is using it, and what could go wrong."
 category: "Analysis"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

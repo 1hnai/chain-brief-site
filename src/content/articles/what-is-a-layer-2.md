@@ -3,7 +3,7 @@ title: "What Is a Layer 2?"
 description: "Layer 2 networks move Ethereum computation off-chain to cut costs and increase throughput, while inheriting the security of Ethereum's main chain. Here is how they work."
 category: "Chain 101"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

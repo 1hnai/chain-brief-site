@@ -3,7 +3,7 @@ title: "The OCC's Stablecoin Rules: What the GENIUS Act Actually Requires"
 description: "The OCC has proposed a comprehensive federal framework for stablecoin issuers under the GENIUS Act, including a $10 billion threshold that forces large state-regulated issuers to go federal or stop growing."
 category: "Regulatory Watch"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

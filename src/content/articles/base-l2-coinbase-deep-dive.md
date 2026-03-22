@@ -3,7 +3,7 @@ title: "Base at Two: How Coinbase Built Consumer Crypto's Default Chain"
 description: "Coinbase's Ethereum Layer 2 grew from a quiet 2023 launch into one of the most active rollups without issuing a token. Here is how it works, what drove its growth, and where the centralization risks sit."
 category: "Deep Dive"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

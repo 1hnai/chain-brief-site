@@ -3,7 +3,7 @@ title: "Bitcoin Dominance Above 60%: What the Market Structure Is Telling You"
 description: "Bitcoin's share of total crypto market cap has held above 60% for months. Here is what the data says about why altcoins keep underperforming and what would need to change."
 category: "Analysis"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

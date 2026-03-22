@@ -3,7 +3,7 @@ title: "Bitcoin ETFs Rewired the Market. Here Is the Evidence."
 description: "Two years after spot Bitcoin ETFs launched in the US, institutional flows have changed how Bitcoin trades, who holds it, and what drives its price."
 category: "Analysis"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

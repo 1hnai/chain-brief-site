@@ -3,7 +3,7 @@ title: "Ethereum's Pectra Upgrade: What Actually Changed"
 description: "Pectra shipped in May 2025 with no single dramatic headline. Ten months on, here's what its four core changes have actually done."
 category: "Analysis"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg"
 ---

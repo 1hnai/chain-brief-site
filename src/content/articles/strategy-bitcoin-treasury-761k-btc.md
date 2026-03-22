@@ -3,7 +3,7 @@ title: "Strategy Now Holds 761,068 Bitcoin. What That Actually Means."
 description: "Strategy's treasury has crossed $57.6 billion in Bitcoin after its latest $1.57B purchase. The accumulation strategy is a structural feature of this market now, not a headline curiosity."
 category: "Analysis"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 

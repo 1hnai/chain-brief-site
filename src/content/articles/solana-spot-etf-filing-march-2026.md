@@ -3,7 +3,7 @@ title: "After Bitcoin and Ethereum, Solana Is Next in the Spot ETF Queue"
 description: "A major US asset manager filed for a spot Solana ETF this week. The filing tests how far the new regulatory consensus on crypto actually extends."
 category: "Analysis"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 
