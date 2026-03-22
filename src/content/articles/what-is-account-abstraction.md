@@ -39,7 +39,7 @@ By early 2026, the ERC-4337 ecosystem had deployed tens of millions of smart acc
 
 ## EIP-7702: The Protocol-Level Upgrade
 
-ERC-4337 works, but it is layered on top of Ethereum's architecture in a way that adds complexity and cost. EIP-7702, included in Ethereum's Pectra upgrade (expected on mainnet in 2026), takes a different approach.
+ERC-4337 works, but it is layered on top of Ethereum's architecture in a way that adds complexity and cost. EIP-7702, included in Ethereum's Pectra upgrade (which shipped on mainnet on May 7, 2025), takes a different approach. <!-- FACT-CHECK: fixed "expected on mainnet in 2026" → "shipped on mainnet on May 7, 2025" -->
 
 EIP-7702 lets an EOA temporarily delegate its authority to a smart contract. When a user signs a special authorization message, their regular wallet gains the capabilities of whichever contract they've delegated to, just for that transaction. This means existing wallets can get smart account features without migrating to a new account type.
 
@@ -63,4 +63,4 @@ Account abstraction solves the programmability problem. It does not solve the ke
 
 The more realistic remaining gap is adoption. Most crypto users still interact with EOA wallets. Most dapps are not yet built to take advantage of paymasters or session keys. The infrastructure exists; the product layer is catching up.
 
-Watch for EIP-7702 to push adoption sharply once Pectra ships. The ability to upgrade existing wallets without migration removes the largest friction point for the wallets that already have users.
+EIP-7702 has been live since Pectra shipped in May 2025. The ability to upgrade existing wallets without migration removes the largest friction point for the wallets that already have users, and adoption has been building since activation.

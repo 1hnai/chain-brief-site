@@ -21,7 +21,7 @@ The metric has limits. Stablecoin supply has grown significantly since 2023, and
 
 **The risk appetite for altcoins has collapsed.** The 2021 cycle generated enormous retail interest in anything that wasn't Bitcoin. That cohort is largely gone, either because they lost money or because interest moved elsewhere. The projects that replaced them, including the next wave of layer-2 tokens, DeFi governance tokens, and new L1s, have had to compete for a smaller pool of capital. When retail exits a market, the assets most dependent on retail speculation suffer the most.
 
-**Bitcoin's narrative has gotten stronger, not weaker.** Corporate treasury adoption (Strategy holds over 500,000 BTC as of early 2026 according to public filings), national reserve discussions in multiple countries, and the halving in April 2024 have all reinforced a single coherent story: Bitcoin as scarce digital collateral. Altcoins have many competing narratives and no single one has cut through to mainstream finance in the same way.
+**Bitcoin's narrative has gotten stronger, not weaker.** Corporate treasury adoption (Strategy holds over 761,000 BTC as of March 2026 according to public filings <!-- FACT-CHECK: fixed "over 500,000" → "over 761,000"; Strategy confirmed 761,068 BTC on March 17, 2026 SEC filing -->), national reserve discussions in multiple countries, and the halving in April 2024 have all reinforced a single coherent story: Bitcoin as scarce digital collateral. Altcoins have many competing narratives and no single one has cut through to mainstream finance in the same way.
 
 ## The Ethereum Exception (Sort Of)
 

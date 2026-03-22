@@ -21,7 +21,7 @@ The result is a flywheel: when bitcoin rises, Strategy's stock price rises (it t
 
 ## Buying into a 44% drawdown
 
-Bitcoin is currently at around $70,700. Its all-time high, set in October 2025, was approximately $126,021. Strategy is buying into a drawdown that has lasted roughly five months and erased nearly half the peak price.
+Bitcoin is currently at around $70,700. Its all-time high, set in October 2025, was approximately $126,210. <!-- FACT-CHECK: fixed $126,021 → $126,210 (Coinbase/CoinMarketCap data shows ATH of ~$126,210 on Oct 6, 2025) --> Strategy is buying into a drawdown that has lasted roughly five months and erased nearly half the peak price.
 
 That is not an accident. The company's position is so large that it cannot tactically time entries with any precision. It also does not try to. The average cost basis on the full 761,068 BTC has not been disclosed in recent filings, but the March purchase at $70,194 is below the current spot price, which suggests Saylor views the current level as attractive.
 
@@ -31,7 +31,7 @@ Strategy is, in effect, making a bet that this macro pressure is temporary and t
 
 ## What the institutional bid means for the market
 
-Strategy is not the only institution holding bitcoin in size. BlackRock's IBIT spot ETF holds well over 500,000 BTC on behalf of its investors. Fidelity's FBTC, Ark's ARKB, and a dozen other products collectively hold hundreds of thousands more. MicroStrategy's corporate treasury model has been replicated, at smaller scale, by dozens of other public companies.
+Strategy is not the only institution holding bitcoin in size. BlackRock's IBIT spot ETF holds well over 700,000 BTC on behalf of its investors. <!-- FACT-CHECK: fixed "well over 500,000" → "well over 700,000"; IBIT surpassed 800,000 BTC in early 2026, currently ~786,000 BTC per The Block data --> Fidelity's FBTC, Ark's ARKB, and a dozen other products collectively hold hundreds of thousands more. MicroStrategy's corporate treasury model has been replicated, at smaller scale, by dozens of other public companies.
 
 This matters for understanding price behaviour. A structurally large and sticky institutional buyer base changes the dynamics of drawdowns. In 2022, when bitcoin fell from $69,000 to $15,500, the marginal seller was largely retail speculators, over-leveraged DeFi protocols, and collapsing centralised lenders. The institutional bid that exists now was not present then.
 

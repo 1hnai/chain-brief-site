@@ -7,7 +7,7 @@ status: "draft"
 author: "Chain Brief"
 ---
 
-In March 2025, a trader opened a $6 million long position in JELLY, a meme token with thin liquidity, then attempted to crash the spot price to force Hyperliquid's community liquidity vault into a loss it couldn't absorb. The attack failed. Hyperliquid's validators voted within hours to delist the JELLY perpetual market and settle positions at a price favorable to the vault.
+In March 2025, a trader deposited approximately $7 million across multiple accounts to establish a leveraged long position in JELLY, a meme token with thin liquidity, then attempted to crash the spot price to force Hyperliquid's community liquidity vault into a loss it couldn't absorb. <!-- FACT-CHECK: fixed "$6 million long position" → "approximately $7 million across multiple accounts"; per Arkham Intelligence/CoinDesk postmortems, the exploiter deposited $7M across three accounts --> The attack failed. Hyperliquid's validators voted within hours to delist the JELLY perpetual market and settle positions at a price favorable to the vault.
 
 It worked. The vault was protected. And the incident confirmed what critics had suspected: Hyperliquid's decentralization has limits that matter.
 

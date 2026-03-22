@@ -21,7 +21,7 @@ The result is pooled security. The same capital that validates Ethereum blocks c
 
 ## What EigenLayer has become
 
-By March 2026, EigenLayer has grown into one of the most significant protocols in the Ethereum network. Around 4.3 million ETH - roughly $15 billion in value - is restaked through the protocol, representing about 93% of the restaking market. The project has since rebranded to **EigenCloud**, expanding its scope toward verifiable computation and AI inference services, not just staking infrastructure.
+By March 2026, EigenLayer has grown into one of the most significant protocols in the Ethereum network. Around 4.3 million ETH - roughly $15 billion in value - is restaked through the protocol, representing about 93% of the restaking market. <!-- STALE: TVL peaked at ~$28.6B in 2025; the "$15 billion" figure may reflect a specific point in time and the ETH amount changes; 93% market share figure unverified --> The project has since rebranded to **EigenCloud**, expanding its scope toward verifiable computation and AI inference services, not just staking infrastructure.
 
 New products - EigenDA (a data availability service used by multiple rollups), EigenCompute, and EigenAI - have launched on mainnet. EigenDA in particular has seen real adoption, providing cheaper data availability to L2s that don't want to pay Ethereum blob fees for every transaction.
 

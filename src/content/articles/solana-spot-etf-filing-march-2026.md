@@ -7,13 +7,13 @@ status: "draft"
 author: "Chain Brief"
 ---
 
-A major US asset manager filed for a spot Solana ETF this week, adding Solana to a product category that started with Bitcoin in January 2024 and expanded to Ethereum four months later. The question now is whether Solana follows the same path, or whether the regulatory issues that blocked it before have actually been resolved.
+A major US asset manager filed for a spot Solana ETF this week, adding Solana to a product category that started with Bitcoin in January 2024 and expanded to Ethereum in July 2024. <!-- FACT-CHECK: fixed "four months later" (would imply May 2024); Ethereum ETF 19b-4 forms approved May 23, 2024 but trading began July 23, 2024 --> The question now is whether Solana follows the same path, or whether the regulatory issues that blocked it before have actually been resolved.
 
 ## The ETF Precedent Bitcoin Set
 
 Before January 2024, there was no spot Bitcoin ETF in the United States. The SEC had rejected every application for over a decade, arguing the market was too susceptible to manipulation. A court ruling in August 2023 forced the SEC's hand, and 11 spot Bitcoin ETFs launched simultaneously in January 2024.
 
-The appetite was immediate. BlackRock's iShares Bitcoin Trust became one of the fastest-growing ETFs ever by assets under management, reaching $10 billion in under three months. Ethereum followed in May 2024, with smaller but still substantial inflows.
+The appetite was immediate. BlackRock's iShares Bitcoin Trust became one of the fastest-growing ETFs ever by assets under management, reaching $10 billion in approximately seven weeks. <!-- FACT-CHECK: fixed "under three months" → "approximately seven weeks"; IBIT crossed $10B AUM on March 1, 2024, ~7 weeks after Jan 11, 2024 launch per Bloomberg/CryptoSlate --> Ethereum followed in May 2024, with smaller but still substantial inflows.
 
 Both products did something important: they gave institutional allocators a regulated, custodied route into crypto without needing to hold private keys. For pension funds, family offices, and advisers with compliance departments, that distinction matters.
 

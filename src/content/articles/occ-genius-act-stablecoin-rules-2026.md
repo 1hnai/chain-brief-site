@@ -15,7 +15,7 @@ The GENIUS Act, which became law in July 2025, created the legislative authority
 
 The most consequential provision in the OCC's proposal is a size-based trigger: any stablecoin issuer regulated at the state level that exceeds $10 billion in outstanding stablecoins must either obtain federal supervision or stop issuing new coins within 360 days.
 
-This is directed, without naming names, at Circle and Tether. Circle's USDC has a market cap of roughly $43 billion. Tether's USDT is the largest stablecoin by far, with more than $140 billion outstanding, though Tether is incorporated offshore and the jurisdictional question is more complex.
+This is directed, without naming names, at Circle and Tether. Circle's USDC has a market cap of roughly $60 billion. <!-- STALE: USDC supply was ~$43B at time of writing but has grown substantially; as of March 2026 is approximately $60–79B per CoinMarketCap --> Tether's USDT is the largest stablecoin by far, with more than $140 billion outstanding <!-- STALE: USDT supply exceeded $140B and is closer to $184B as of March 2026 per CoinMarketCap -->, though Tether is incorporated offshore and the jurisdictional question is more complex.
 
 For Circle, which has long sought a banking charter and positioned itself as the compliance-friendly stablecoin issuer, the federal pathway may be the intended destination anyway. The OCC rules effectively formalise that path and create a deadline.
 

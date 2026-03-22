@@ -33,7 +33,7 @@ This is one of the clearest real-world use cases for crypto payments that has em
 
 Stablecoins are the obvious currency for machine-to-machine transactions: they are programmable, settle instantly, carry no exchange-rate volatility, and work across borders without a bank. USDC on Base already settles for fractions of a cent, making it viable for micropayments that would be uneconomical on traditional payment rails.
 
-The x402 protocol has processed over 50 million transactions since its May 2025 launch. Stripe has integrated it to bill agents directly. Cloudflare and Coinbase co-founded the x402 Foundation to push adoption across the open web.
+The x402 protocol has processed over 100 million transactions since its May 2025 launch. <!-- FACT-CHECK: fixed "50 million" → "100 million"; Cloudflare/Coinbase reported over 100 million payments processed as of late 2025 --> Stripe has integrated it to bill agents directly. Cloudflare and Coinbase co-founded the x402 Foundation to push adoption across the open web.
 
 World, meanwhile, now covers nearly **18 million verified users** across 160+ countries. For developers building agentic products, that installed base makes World ID a serious identity primitive, not just a biometric curiosity.
 

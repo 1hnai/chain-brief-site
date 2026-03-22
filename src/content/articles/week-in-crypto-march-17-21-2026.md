@@ -23,7 +23,7 @@ Total crypto market cap ended the week around $3.4 trillion, roughly flat on the
 
 The Ethereum core development team announced that the Osaka upgrade - the next major hard fork after Pectra - has a confirmed deployment date on the Sepolia testnet for April 8. Osaka is expected to ship the first iteration of Verkle trees to testnet for extended evaluation.
 
-The Pectra upgrade, which shipped in late 2025, included EIP-7702 and several validator improvements. Osaka's primary focus is the Verge phase of Ethereum's roadmap: Verkle trees would allow stateless clients and dramatically reduce the storage requirements for running a full node.
+The Pectra upgrade, which shipped in May 2025, included EIP-7702 and several validator improvements. <!-- FACT-CHECK: fixed "late 2025" → "May 2025"; Pectra activated on mainnet May 7, 2025 --> Osaka's primary focus is the Verge phase of Ethereum's roadmap: Verkle trees would allow stateless clients and dramatically reduce the storage requirements for running a full node.
 
 The testnet announcement is a positive signal for development velocity, though mainnet timelines remain subject to the results of the testing period.
 
@@ -43,7 +43,7 @@ In the US, the House Financial Services Committee advanced a draft stablecoin bi
 
 ## Institutional moves
 
-BlackRock's IBIT Bitcoin ETF crossed $60 billion in assets under management this week - a milestone that underlines just how quickly the product has scaled since its January 2024 launch. For context, IBIT reached $10 billion faster than any ETF in history, and it hasn't slowed materially since.
+BlackRock's IBIT Bitcoin ETF crossed $60 billion in assets under management this week - a milestone that underlines just how quickly the product has scaled since its January 2024 launch. For context, IBIT reached $10 billion faster than any ETF in history <!-- VERIFY: some sources attribute this milestone to under three months; exact record claim unverified but widely cited -->, and it hasn't slowed materially since.
 
 Fidelity reported that its digital assets division saw record institutional account openings in February, with interest concentrated in Bitcoin and Ethereum custody rather than active trading.
 

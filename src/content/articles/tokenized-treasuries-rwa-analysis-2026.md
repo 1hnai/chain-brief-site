@@ -7,7 +7,7 @@ status: "draft"
 author: "Chain Brief"
 ---
 
-BlackRock's BUIDL fund crossed $1 billion in on-chain assets within weeks of its March 2024 launch, faster than almost any tokenized product before it. While the broader market was fixated on meme coin cycles and L1 competition, tokenized real-world assets were quietly assembling one of crypto's most credible product-market fits.
+BlackRock's BUIDL fund crossed $1 billion in on-chain assets within its first year of its March 2024 launch, faster than almost any tokenized product before it. <!-- FACT-CHECK: fixed "within weeks" → "within its first year"; BUIDL launched March 20, 2024 and surpassed $1B AUM on March 13, 2025 per Securitize announcement --> While the broader market was fixated on meme coin cycles and L1 competition, tokenized real-world assets were quietly assembling one of crypto's most credible product-market fits.
 
 The pitch is not complicated. Hold US Treasury bills on a blockchain, earn the yield, and keep those assets usable inside DeFi. For protocol treasuries, DAOs, and institutions that already operate on-chain, it removes a persistent inefficiency: idle stablecoin balances earning nothing.
 

@@ -53,7 +53,7 @@ Stablecoins have three large use cases today.
 
 ## The Regulatory Picture
 
-The US Congress has been debating stablecoin legislation for years. The GENIUS Act, introduced in 2025, would require fiat-backed stablecoin issuers to hold 1:1 reserves in high-quality liquid assets and obtain a banking charter or equivalent license. As of early 2026, the bill has passed committee but has not cleared the full Senate.
+The US Congress has been debating stablecoin legislation for years. The GENIUS Act, signed into law in July 2025, requires fiat-backed stablecoin issuers to hold 1:1 reserves in high-quality liquid assets and obtain a federal or state banking licence or equivalent. <!-- FACT-CHECK: fixed "would require" and "has passed committee but has not cleared the full Senate" → GENIUS Act was signed into law by President Trump on July 18, 2025 -->
 
 The direction is clear even if the timeline is not: stablecoin issuers in the US will face bank-like regulation. That is not necessarily bad. Clearer rules would let more institutions use stablecoins for payments with less legal risk, and would force weaker issuers to either meet reserve standards or exit the market.
 
