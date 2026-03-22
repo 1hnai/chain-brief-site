@@ -10,7 +10,7 @@ image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.s
 
 Ethereum's Pectra upgrade went live on mainnet in May 2025 and received less attention than it deserved. Unlike the Merge, which changed consensus, or Shapella, which unlocked staked ETH withdrawals, Pectra had no single dramatic headline. It bundled a set of targeted improvements across staking, user accounts, and Layer 2 throughput.
 
-Ten months on, it's worth examining what it actually changed.
+Ten months on, here is what it actually changed.
 
 ## EIP-7702: Account abstraction without a new account type
 
