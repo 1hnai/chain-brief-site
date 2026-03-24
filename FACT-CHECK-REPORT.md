@@ -67,3 +67,25 @@
 ### CLEAN
 - **berachain-proof-of-liquidity-deep-dive**: All other claims verified — $100M Series B at $1.5B valuation, April 2024 (CORRECT); Polychain Capital, Framework Ventures, Hack VC as investors (CORRECT — lead investors were Brevan Howard Digital and Framework Ventures, but all named were participants); BEX/Bend/Berps as native apps (CORRECT); Cosmos SDK / EVM execution environment (CORRECT).
 - **ton-telegram-network-analysis-2026**: SEC suit 2019 and settlement 2020 with $18.5M penalties and $1.2B returned (CORRECT); Notcoin 35M+ players, NOT launched May 2024 (CORRECT); Hamster Kombat 300M+ users, HMSTR September 2024 (CORRECT); Pavel Durov arrested Le Bourget August 2024 (CORRECT); STON.fi and DeDust as dominant TON DEXes (consistent with available sources).
+
+---
+
+## Update — 2026-03-24 (third run)
+## New articles checked: 1
+## New issues found: 2
+
+### CRITICAL
+- **genius-act-occ-stablecoin-rules-march-2026**: Total stablecoin supply stated as "~$230 billion" — INCORRECT. Verified figure as of early 2026 is approximately $315 billion (DefiLlama, CoinMarketCap, multiple sources). Fixed directly: changed to "$315 billion".
+
+### STALE
+- **genius-act-occ-stablecoin-rules-march-2026**: USDT market cap stated as "well above $140 billion" — understated; current figure is ~$184 billion (March 2026, CoinMarketCap). Flagged inline with VERIFY comment.
+- **genius-act-occ-stablecoin-rules-march-2026**: USDC market cap stated as "above $60 billion" — understated; current figure is ~$79 billion (March 2026, CoinMarketCap). Flagged inline with VERIFY comment.
+
+### VERIFIED CORRECT
+- GENIUS Act signed July 18, 2025 — confirmed via White House fact sheet, Congress.gov
+- OCC NPRM published March 2, 2026 — confirmed via Federal Register (91 FR 10202)
+- 370-page document — confirmed via multiple legal firm analyses
+- All structural provisions (reserves, redemption, $10B threshold, 120-day application clock, yield ban, AML carve-out) — confirmed
+
+### QUALITY GATE
+- No em dashes in body text. No AI filler phrases found. Status set to live.

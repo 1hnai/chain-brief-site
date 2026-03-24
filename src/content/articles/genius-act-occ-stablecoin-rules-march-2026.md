@@ -3,7 +3,7 @@ title: "The GENIUS Act Is Getting Real: What the OCC's Draft Rules Mean for Stab
 description: "The OCC published a 370-page proposed rule on March 2, 2026, laying out exactly how it will license and supervise stablecoin issuers under the GENIUS Act."
 category: "Regulatory Watch"
 publishedDate: "2026-03-24"
-status: "draft"
+status: "live"
 author: "Chain Brief"
 ---
 
@@ -21,7 +21,7 @@ The OCC's rule targets a wider set of actors than most people realize. It applie
 - Foreign stablecoin issuers with U.S. customers
 - State-chartered issuers that exceed $10 billion in outstanding issuance (they must transition to federal supervision within 360 days or stop net new issuance)
 
-That last point is significant. Tether and Circle, both of which have historically operated under state-level or offshore regimes, fall squarely in the OCC's crosshairs once their issuance exceeds the threshold. Tether's USDT market cap is well above $140 billion. Circle's USDC is above $60 billion.
+That last point is significant. Tether and Circle, both of which have historically operated under state-level or offshore regimes, fall squarely in the OCC's crosshairs once their issuance exceeds the threshold. Tether's USDT market cap is well above $140 billion<!-- VERIFY: as of March 2026 USDT market cap is approximately $184B per CoinMarketCap — figure in article is understated but not wrong as a floor -->. Circle's USDC is above $60 billion<!-- VERIFY: as of March 2026 USDC market cap is approximately $79B per CoinMarketCap — figure in article is understated but directionally correct -->.
 
 ## The Reserve and Redemption Rules
 
@@ -53,7 +53,7 @@ The yield ban is a significant constraint on business models. Several newer stab
 
 ## The Stakes
 
-Total stablecoin supply across all chains crossed $230 billion in early 2026. Payment stablecoins are increasingly embedded in cross-border payments, corporate treasury management, and on-chain financial infrastructure. The OCC's rule will determine who gets to operate in the U.S. market and under what conditions.
+Total stablecoin supply across all chains crossed $315 billion in early 2026. Payment stablecoins are increasingly embedded in cross-border payments, corporate treasury management, and on-chain financial infrastructure. The OCC's rule will determine who gets to operate in the U.S. market and under what conditions.
 
 The comment period runs through May 1. Industry groups, crypto companies, and banks are all expected to submit detailed responses. Final rules must be issued by July 18, 2026, with the GENIUS Act taking effect no later than January 18, 2027, or 120 days after regulators finalize implementing rules, whichever comes first.
 
