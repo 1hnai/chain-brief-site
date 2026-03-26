@@ -25,7 +25,7 @@ Liquid staking protocols fix both problems.
 
 A liquid staking protocol pools ETH from many depositors, runs validators on their behalf, and gives each depositor a token that represents their share of the pool.
 
-That token is what makes it "liquid." You deposit ETH, you receive a liquid staking token (LST). You can use that LST anywhere — lend it, borrow against it, provide liquidity with it, or just sell it. Meanwhile, the underlying ETH is staked and earning rewards.
+That token is what makes it "liquid." You deposit ETH, you receive a liquid staking token (LST). You can use that LST anywhere - lend it, borrow against it, provide liquidity with it, or just sell it. Meanwhile, the underlying ETH is staked and earning rewards.
 
 The LST accrues value over time to reflect staking rewards. Lido's stETH, for example, uses a rebasing model where your stETH balance increases daily. Rocket Pool's rETH uses an exchange-rate model where 1 rETH becomes worth more ETH over time. Both approaches deliver the same thing: staking yield without locking capital.
 
