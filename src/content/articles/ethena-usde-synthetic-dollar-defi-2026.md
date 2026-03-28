@@ -61,4 +61,4 @@ In 2024, sUSDe offered yields that consistently exceeded what was available thro
 
 USDe can be used as collateral on lending protocols, as a liquidity pair in stablecoin pools, and in other DeFi integrations. The yield-bearing sUSDe version has been integrated as collateral in several protocols that let users borrow against it.
 
-The model Ethena built is genuinely novel for crypto: a synthetic dollar that earns yield from within the crypto ecosystem rather than from traditional finance instruments. Its risks are also genuinely novel. Whether those risks are appropriately priced depends on whether the reserve fund and diversified exchange relationships are sufficient to survive the scenarios that matter most.
+The model Ethena built is genuinely novel for crypto: a synthetic dollar that earns yield from within crypto markets rather than from traditional finance instruments. Its risks are also genuinely novel. Whether those risks are appropriately priced depends on whether the reserve fund and diversified exchange relationships are sufficient to survive the scenarios that matter most.
