@@ -1,7 +1,7 @@
 ---
 title: "Solana's Alpenglow Upgrade: From 13 Seconds to 150 Milliseconds"
 description: "Solana's Alpenglow proposal passed with 99.6% validator approval. Here is what the consensus overhaul actually changes, and why it matters for DeFi and payments."
-category: "Layer 1"
+category: "Deep Dive"
 publishedDate: "2026-03-29"
 status: "live"
 author: "Chain Brief"
