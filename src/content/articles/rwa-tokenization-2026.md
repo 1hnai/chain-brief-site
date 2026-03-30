@@ -1,6 +1,6 @@
 ---
 title: "Real-World Assets on Chain: What's Actually Working in 2026"
-description: "Tokenised Treasuries crossed $5 billion. Private credit protocols are originating real loans. The RWA narrative has moved from whitepaper promise to live infrastructure — but the hard problems haven't gone away."
+description: "Tokenised Treasuries crossed $5 billion. Private credit protocols are originating real loans. The RWA narrative has moved from whitepaper promise to live infrastructure, but the hard problems haven't gone away."
 category: "DeFi"
 publishedDate: "2026-03-29"
 status: "live"
