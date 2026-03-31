@@ -141,9 +141,121 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"articles": {
+"ai-agents-crypto-wallets-world-coinbase-x402.md": {
+	id: "ai-agents-crypto-wallets-world-coinbase-x402.md";
+  slug: "ai-agents-crypto-wallets-world-coinbase-x402";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"base-l2-coinbase-deep-dive.md": {
+	id: "base-l2-coinbase-deep-dive.md";
+  slug: "base-l2-coinbase-deep-dive";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"berachain-proof-of-liquidity-deep-dive.md": {
+	id: "berachain-proof-of-liquidity-deep-dive.md";
+  slug: "berachain-proof-of-liquidity-deep-dive";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"bitcoin-20-million-mined-milestone.md": {
+	id: "bitcoin-20-million-mined-milestone.md";
+  slug: "bitcoin-20-million-mined-milestone";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"bitcoin-dominance-altcoin-season-2026.md": {
+	id: "bitcoin-dominance-altcoin-season-2026.md";
+  slug: "bitcoin-dominance-altcoin-season-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"bitcoin-etf-flows-institutional-structure-2026.md": {
+	id: "bitcoin-etf-flows-institutional-structure-2026.md";
+  slug: "bitcoin-etf-flows-institutional-structure-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"ethereum-pectra-upgrade-analysis-2026.md": {
+	id: "ethereum-pectra-upgrade-analysis-2026.md";
+  slug: "ethereum-pectra-upgrade-analysis-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "ethereum-roadmap-2026.md": {
 	id: "ethereum-roadmap-2026.md";
   slug: "ethereum-roadmap-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"genius-act-occ-stablecoin-rules-march-2026.md": {
+	id: "genius-act-occ-stablecoin-rules-march-2026.md";
+  slug: "genius-act-occ-stablecoin-rules-march-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"hyperliquid-deep-dive-2026.md": {
+	id: "hyperliquid-deep-dive-2026.md";
+  slug: "hyperliquid-deep-dive-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"occ-genius-act-stablecoin-rules-2026.md": {
+	id: "occ-genius-act-stablecoin-rules-2026.md";
+  slug: "occ-genius-act-stablecoin-rules-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"sec-cftc-crypto-classification-march-2026.md": {
+	id: "sec-cftc-crypto-classification-march-2026.md";
+  slug: "sec-cftc-crypto-classification-march-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"solana-spot-etf-filing-march-2026.md": {
+	id: "solana-spot-etf-filing-march-2026.md";
+  slug: "solana-spot-etf-filing-march-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"stablecoin-market-competition-2026.md": {
+	id: "stablecoin-market-competition-2026.md";
+  slug: "stablecoin-market-competition-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"strategy-bitcoin-treasury-761k-btc.md": {
+	id: "strategy-bitcoin-treasury-761k-btc.md";
+  slug: "strategy-bitcoin-treasury-761k-btc";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"tokenized-treasuries-rwa-analysis-2026.md": {
+	id: "tokenized-treasuries-rwa-analysis-2026.md";
+  slug: "tokenized-treasuries-rwa-analysis-2026";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"ton-telegram-network-analysis-2026.md": {
+	id: "ton-telegram-network-analysis-2026.md";
+  slug: "ton-telegram-network-analysis-2026";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
@@ -162,6 +274,13 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
+"what-is-a-crypto-oracle.md": {
+	id: "what-is-a-crypto-oracle.md";
+  slug: "what-is-a-crypto-oracle";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "what-is-a-crypto-wallet.md": {
 	id: "what-is-a-crypto-wallet.md";
   slug: "what-is-a-crypto-wallet";
@@ -169,9 +288,51 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
+"what-is-a-layer-2.md": {
+	id: "what-is-a-layer-2.md";
+  slug: "what-is-a-layer-2";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"what-is-a-stablecoin.md": {
+	id: "what-is-a-stablecoin.md";
+  slug: "what-is-a-stablecoin";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"what-is-a-zero-knowledge-proof.md": {
+	id: "what-is-a-zero-knowledge-proof.md";
+  slug: "what-is-a-zero-knowledge-proof";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"what-is-account-abstraction.md": {
+	id: "what-is-account-abstraction.md";
+  slug: "what-is-account-abstraction";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "what-is-defi.md": {
 	id: "what-is-defi.md";
   slug: "what-is-defi";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"what-is-mev.md": {
+	id: "what-is-mev.md";
+  slug: "what-is-mev";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"what-is-restaking-eigenlayer.md": {
+	id: "what-is-restaking-eigenlayer.md";
+  slug: "what-is-restaking-eigenlayer";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
