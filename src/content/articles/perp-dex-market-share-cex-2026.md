@@ -15,7 +15,7 @@ That is not a rounding error. It is a structural shift in where crypto traders w
 
 Perpetual futures, the dominant instrument in crypto derivatives, allow traders to hold leveraged positions without expiry dates. For years, the product belonged entirely to centralized exchanges. Binance, Bybit, and OKX built the infrastructure, the liquidity, and the user experience that retail and institutional traders came to expect.
 
-The decentralized version was always conceptually appealing — no custody risk, no KYC friction, transparent liquidation mechanics — but the execution was poor. Slippage was high, interfaces were clunky, and order matching on-chain could not compete with the speed of a centralized orderbook.
+The decentralized version was always conceptually appealing - no custody risk, no KYC friction, transparent liquidation mechanics - but the execution was poor. Slippage was high, interfaces were clunky, and order matching on-chain could not compete with the speed of a centralized orderbook.
 
 That gap has narrowed significantly. Hyperliquid in particular changed the conversation by building a purpose-built Layer 1 with an onchain central limit order book. Traders got CEX-like speed with self-custody. The platform has now processed over $3.35 trillion in cumulative volume, and deposits have exceeded $260 billion.
 
@@ -27,7 +27,7 @@ CoinGecko's 2025 annual report documented the trajectory clearly. DEX perp open 
 
 The DEX-to-CEX futures volume ratio hit a record high in the second quarter of 2025 and has continued trending upward. Coinbase Institutional's 2026 outlook confirmed the $1.2 trillion monthly volume figure as a new baseline, not a one-time spike.
 
-CEXs still process far more in absolute terms — Binance alone handles around $69 billion per day — but the directional pressure is clear. Market share erosion is accelerating, not stabilizing.
+CEXs still process far more in absolute terms - Binance alone handles around $69 billion per day - but the directional pressure is clear. Market share erosion is accelerating, not stabilizing.
 
 ## Why Traders Are Moving Onchain
 
@@ -41,11 +41,11 @@ Finally, permissionless listings have opened up a new frontier. Hyperliquid's HI
 
 The incumbents are not passive. Binance has accelerated product development and expanded its own onchain infrastructure. Several major exchanges have explored hybrid models that combine centralized matching engines with onchain settlement.
 
-But the structural disadvantage is real. Centralized venues face regulatory scrutiny that restricts their ability to serve certain markets. They cannot offer the same composability or transparency that onchain venues provide natively. And the user cohort most interested in those properties — sophisticated DeFi-native traders — is precisely the cohort that has been migrating to perp DEXs.
+But the structural disadvantage is real. Centralized venues face regulatory scrutiny that restricts their ability to serve certain markets. They cannot offer the same composability or transparency that onchain venues provide natively. And the user cohort most interested in those properties - sophisticated DeFi-native traders - is precisely the cohort that has been migrating to perp DEXs.
 
 ## What Comes Next
 
-Delphi Digital's 2026 outlook argued that perp DEXs are moving from crypto-specific instruments toward global financial infrastructure. The next wave of products likely includes equity perpetuals — tokenized derivatives on major stocks, accessible 24 hours a day with no geographic restrictions.
+Delphi Digital's 2026 outlook argued that perp DEXs are moving from crypto-specific instruments toward global financial infrastructure. The next wave of products likely includes equity perpetuals - tokenized derivatives on major stocks, accessible 24 hours a day with no geographic restrictions.
 
 Whether regulators accommodate that development remains an open question. But the market share trajectory of the past 24 months suggests that onchain derivatives are no longer a niche experiment running alongside the real derivatives market. They are becoming part of it.
 
