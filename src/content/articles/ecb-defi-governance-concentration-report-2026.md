@@ -1,7 +1,7 @@
 ---
 title: "ECB Report: DeFi Governance Is More Concentrated Than It Appears"
 description: "A new European Central Bank working paper finds that the top 100 addresses control over 80% of voting power in major DeFi protocols, raising hard questions about what decentralization actually means."
-category: "DeFi"
+category: "Deep Dive"
 publishedDate: "2026-03-31"
 status: "live"
 author: "Chain Brief"

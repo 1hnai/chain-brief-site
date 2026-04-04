@@ -1,7 +1,7 @@
 ---
 title: "Invesco steps into tokenized treasuries by taking over a $967M fund"
 description: "Invesco has entered the tokenized treasury market by assuming management of Superstate's USTB fund. The structure of the deal tells you something important about how traditional finance is actually adopting on-chain infrastructure."
-category: "News"
+category: "Market Brief"
 publishedDate: "2026-03-30"
 status: "live"
 author: "Chain Brief"

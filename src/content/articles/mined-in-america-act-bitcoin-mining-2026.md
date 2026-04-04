@@ -1,7 +1,7 @@
 ---
 title: "The Mined in America Act Wants to Rewire Bitcoin's Supply Chain"
 description: "Senators Lummis and Cassidy introduced legislation to certify domestic Bitcoin miners, phase out Chinese hardware, and codify the Strategic Bitcoin Reserve into law."
-category: "Policy"
+category: "Regulatory Watch"
 publishedDate: "2026-04-01"
 status: "live"
 author: "Chain Brief"

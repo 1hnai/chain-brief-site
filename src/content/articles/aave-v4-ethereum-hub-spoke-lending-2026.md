@@ -1,7 +1,7 @@
 ---
 title: "Aave V4 Goes Live on Ethereum With a New Lending Architecture"
 description: "Aave's fourth major protocol version launched on Ethereum mainnet, introducing a hub-and-spoke model designed to support real-world credit markets and structured lending alongside DeFi."
-category: "DeFi"
+category: "Deep Dive"
 publishedDate: "2026-04-03"
 status: "live"
 author: "Chain Brief"

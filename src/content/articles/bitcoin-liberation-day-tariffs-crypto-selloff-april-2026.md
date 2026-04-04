@@ -1,7 +1,7 @@
 ---
 title: "Bitcoin Drops to $66K as 'Liberation Day' Tariffs Trigger Extreme Fear"
 description: "Trump's sweeping tariff announcement on April 2 pushed Bitcoin to its lowest level since February and sent the Fear & Greed Index to 12, a reading not seen since early 2024."
-category: "Markets"
+category: "Market Brief"
 publishedDate: "2026-04-02"
 status: "live"
 author: "Chain Brief"

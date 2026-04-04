@@ -1,7 +1,7 @@
 ---
 title: "New Research Slashes the Qubit Count Needed to Break Bitcoin Encryption"
 description: "A Caltech and Oratomic study finds a neutral-atom quantum computer with roughly 26,000 qubits could crack the elliptic curve cryptography securing Bitcoin and Ethereum wallets in about ten days — far fewer qubits than earlier estimates."
-category: "Security"
+category: "Deep Dive"
 publishedDate: "2026-03-31"
 status: "live"
 author: "Chain Brief"

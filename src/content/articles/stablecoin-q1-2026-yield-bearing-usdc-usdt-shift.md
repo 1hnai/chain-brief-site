@@ -1,7 +1,7 @@
 ---
 title: "Stablecoin Supply Hits $315B in Q1 as Yield-Bearing Products Reshape the Market"
 description: "Total stablecoin supply grew to a record $315 billion in Q1 2026, but the bigger story is the widening gap between USDT and USDC — and the rapid rise of yield-bearing stablecoins."
-category: "DeFi"
+category: "Deep Dive"
 publishedDate: "2026-04-03"
 status: "live"
 author: "Chain Brief"

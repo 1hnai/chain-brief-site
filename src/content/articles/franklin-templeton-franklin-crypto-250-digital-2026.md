@@ -1,7 +1,7 @@
 ---
 title: "Franklin Templeton Launches Franklin Crypto with 250 Digital Acquisition"
 description: "The $1.7 trillion asset manager is forming a dedicated crypto investment division by acquiring CoinFund spinoff 250 Digital, with part of the deal settled in tokenized money-market tokens."
-category: "Institutional"
+category: "Analysis"
 publishedDate: "2026-04-01"
 status: "live"
 author: "Chain Brief"

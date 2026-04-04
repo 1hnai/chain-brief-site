@@ -1,7 +1,7 @@
 ---
 title: "Goldman Sachs Is Using Tokenized Treasuries as Derivatives Collateral"
 description: "Goldman Sachs has moved tokenized U.S. Treasuries into live derivatives workflows, a milestone that signals on-chain finance is no longer a pilot project for the largest banks."
-category: "DeFi"
+category: "Deep Dive"
 publishedDate: "2026-04-02"
 status: "live"
 author: "Chain Brief"

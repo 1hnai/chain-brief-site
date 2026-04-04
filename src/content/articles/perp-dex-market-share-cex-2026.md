@@ -1,7 +1,7 @@
 ---
 title: "Onchain Perp Trading Just Hit $1 Trillion a Month. CEXs Are Paying Attention."
 description: "Decentralized perpetual futures exchanges crossed $1 trillion in monthly volume and now hold roughly 26% of the global perp market. Here is what is driving the shift."
-category: "DeFi"
+category: "Deep Dive"
 publishedDate: "2026-04-01"
 status: "live"
 author: "Chain Brief"
