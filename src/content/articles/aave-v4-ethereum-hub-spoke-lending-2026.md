@@ -15,7 +15,7 @@ Aave V4 introduces a hub-and-spoke model that separates liquidity management fro
 
 The launch started with three hubs. "Core" closely resembles Aave V3's existing structure. "Plus" targets higher yield strategies. "Prime" focuses on stablecoin lending and borrowing. Aave Labs described the limited initial rollout as a deliberate choice to prioritize security over rapid growth.
 
-V4 also introduces support for structured credit, fixed-rate borrowing, and tokenized asset-backed lending — features the team says position Aave to compete for credit markets that have traditionally been dominated by traditional financial intermediaries.
+V4 also introduces support for structured credit, fixed-rate borrowing, and tokenized asset-backed lending - features the team says position Aave to compete for credit markets that have traditionally been dominated by traditional financial intermediaries.
 
 ## Early Numbers and Community Reaction
 
@@ -25,7 +25,7 @@ Aave Labs also confirmed that V4 will run alongside V3, not replace it. That cla
 
 ## The Broader Strategic Picture
 
-Aave founder Stani Kulechov has publicly described V4 as a step toward turning Aave into something resembling a decentralized bank — one that can operate across on-chain consumer lending and institutional credit markets. The hub-and-spoke architecture makes that possible by allowing specialized lending markets to exist within the Aave ecosystem without requiring separate governance approvals for each new market configuration.
+Aave founder Stani Kulechov has publicly described V4 as a step toward turning Aave into something resembling a decentralized bank - one that can operate across on-chain consumer lending and institutional credit markets. The hub-and-spoke architecture makes that possible by allowing specialized lending markets to exist within the Aave ecosystem without requiring separate governance approvals for each new market configuration.
 
 The push into real-world credit comes at a time when tokenized treasuries and asset-backed lending are growing quickly on-chain. BlackRock's tokenized money market fund, Franklin Templeton's on-chain fund products, and several structured credit issuers are already live on Ethereum. Aave V4's spoke model is explicitly designed to accommodate that kind of collateral.
 
@@ -33,6 +33,6 @@ The push into real-world credit comes at a time when tokenized treasuries and as
 
 Aave V4 is still in an early, conservative deployment phase. The protocol team has indicated that additional spokes will be added as the security track record builds. The more important question over the coming months is whether institutional and RWA liquidity migrates into V4 hubs, or whether the $24 billion sitting in V3 stays put due to inertia and risk aversion.
 
-The governance disagreements that surfaced during V4 development — around revenue allocation and product direction — have not been fully resolved. How those tensions play out in the DAO will influence how quickly V4 can scale.
+The governance disagreements that surfaced during V4 development - around revenue allocation and product direction - have not been fully resolved. How those tensions play out in the DAO will influence how quickly V4 can scale.
 
 For now, Aave V4 represents the clearest signal yet that the protocol is targeting a market much larger than crypto-native leverage trading.
