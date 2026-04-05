@@ -7,19 +7,19 @@ author: "Chain Brief"
 category: "Analysis"
 ---
 
-On April 1, Drift Protocol — one of Solana's largest decentralized exchange and perpetuals platforms — was drained of roughly $280 million in under 12 minutes. The attack did not rely on a zero-day vulnerability or a novel smart contract bug. It turned a convenience feature built into Solana itself into a weapon.
+On April 1, Drift Protocol - one of Solana's largest decentralized exchange and perpetuals platforms - was drained of roughly $280 million in under 12 minutes. The attack did not rely on a zero-day vulnerability or a novel smart contract bug. It turned a convenience feature built into Solana itself into a weapon.
 
 ## What Are Durable Nonces?
 
 Solana transactions normally expire within a short window, tied to a recent blockhash. Durable nonces replace that expiring blockhash with a fixed, stored code that never times out. The feature exists to serve legitimate use cases: hardware wallets that need time to physically approve transactions, multisig setups that require multiple offline signers, and exchanges that need to pre-prepare transactions for batch submission.
 
-The mechanic is simple. A nonce account holds a one-time code. A transaction references that code instead of a blockhash. As long as nobody advances the nonce, the transaction stays valid indefinitely. Submit it today, in three weeks, or in three months — it will go through.
+The mechanic is simple. A nonce account holds a one-time code. A transaction references that code instead of a blockhash. As long as nobody advances the nonce, the transaction stays valid indefinitely. Submit it today, in three weeks, or in three months - it will go through.
 
 That indefinite validity is exactly what the attacker used.
 
 ## How the Attack Unfolded
 
-On-chain staging began on March 11, when 10 ETH was withdrawn from Tornado Cash to fund the operation. Over the following days, the attacker deployed a token called CarbonVote (CVT) and positioned it as a Drift governance token. By March 23, four durable nonce accounts had been created — two associated with legitimate Drift Security Council members and two controlled by the attacker.
+On-chain staging began on March 11, when 10 ETH was withdrawn from Tornado Cash to fund the operation. Over the following days, the attacker deployed a token called CarbonVote (CVT) and positioned it as a Drift governance token. By March 23, four durable nonce accounts had been created - two associated with legitimate Drift Security Council members and two controlled by the attacker.
 
 The attacker had somehow obtained valid signatures from two of five Security Council members, locked into durable nonce transactions that would not expire. Whether those signatures were obtained through social engineering, compromised keys, or an inside access vector has not been confirmed publicly.
 
@@ -27,7 +27,7 @@ With those pre-signed transactions in hand, the attacker waited. On April 1, the
 
 ## Why This Attack Is Different
 
-Most large DeFi exploits target code — a reentrancy vulnerability, an oracle manipulation, a miscalculated liquidation threshold. The Drift attack targeted process. The smart contracts behaved exactly as written. The governance mechanism did what it was designed to do. The nonce feature performed correctly.
+Most large DeFi exploits target code - a reentrancy vulnerability, an oracle manipulation, a miscalculated liquidation threshold. The Drift attack targeted process. The smart contracts behaved exactly as written. The governance mechanism did what it was designed to do. The nonce feature performed correctly.
 
 The failure was operational: the Security Council members signed transactions without fully understanding that durable nonces meant those signatures would remain valid and submittable indefinitely, independent of any future context. A signature that feels routine in March becomes catastrophic authority in April.
 
@@ -41,7 +41,7 @@ Drift suspended deposits and withdrawals immediately after detecting the exploit
 
 ## What Protocols Should Take Away
 
-Durable nonces are not going away — they solve real problems for custodians, multisig setups, and institutional users. But the Drift incident makes a strong case for governance hygiene changes across Solana-based protocols:
+Durable nonces are not going away - they solve real problems for custodians, multisig setups, and institutional users. But the Drift incident makes a strong case for governance hygiene changes across Solana-based protocols:
 
 - Pre-signed transactions should carry clear, bounded context about what they authorize and under what conditions they are valid.
 - Security Councils need explicit policy around durable nonce usage, including time locks or cancellation procedures.
