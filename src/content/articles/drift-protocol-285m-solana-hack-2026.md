@@ -7,7 +7,7 @@ author: "Chain Brief"
 category: "Analysis"
 ---
 
-On April 1, 2026, Drift Protocol — the largest decentralized perpetual futures exchange on Solana — lost $285 million in user funds in roughly 12 minutes. It is the biggest DeFi exploit of 2026, and the second-largest in Solana's history behind only the $326 million Wormhole bridge hack in 2022.
+On April 1, 2026, Drift Protocol - the largest decentralized perpetual futures exchange on Solana - lost $285 million in user funds in roughly 12 minutes. It is the biggest DeFi exploit of 2026, and the second-largest in Solana's history behind only the $326 million Wormhole bridge hack in 2022.
 
 What makes this attack stand out is not the size alone. It is the method: no smart contract bug, no zero-day vulnerability in Solana itself. The attacker combined a fake token, manipulated oracles, and a hijacked governance structure to walk away with nearly a third of a billion dollars.
 
@@ -29,7 +29,7 @@ From that point, the drain was straightforward. Around $285 million in assets le
 
 ## Attribution
 
-Blockchain analytics firm TRM Labs linked the attack pattern to North Korean state-sponsored hackers based on staging behavior, timing relative to Pyongyang business hours, and wallet movement patterns consistent with prior DPRK-linked exploits. The March 12 movement of funds — around 9 AM Pyongyang time — matches the working cadence seen in previous attacks attributed to the Lazarus Group.
+Blockchain analytics firm TRM Labs linked the attack pattern to North Korean state-sponsored hackers based on staging behavior, timing relative to Pyongyang business hours, and wallet movement patterns consistent with prior DPRK-linked exploits. The March 12 movement of funds - around 9 AM Pyongyang time - matches the working cadence seen in previous attacks attributed to the Lazarus Group.
 
 ## Market Fallout
 
